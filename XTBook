@@ -1,0 +1,113 @@
+#!/usr/bin/env bash
+set -e
+
+# DICTDIR=~/Documents/Dictionaries
+# MKXTBDIR=~/MkXTBWikiplexus/build.unix
+# PLIST=~/dotfiles/tools/info-plists
+# 7ZFLAG=-v2g
+
+if [ $# -ne 3 ]; then
+    echo "XTBook dictionary convertion assistant 2203 by watamario15"
+    echo "This script obtains a MediaWiki dump, converts it to XTBook format, and create a 7z archive for uploading."
+    echo
+    echo "Usage: XTBook [Source] [WikiName] [Date]"
+    echo "Examples: XTBook wikimedia jawiki 20220101           # Japanese Wikipedia"
+    echo "          XTBook uncyclomedia jaunwiki 20220101      # Japanese Uncyclopedia"
+    echo "          XTBook uncyclomedia jaunwikiimg 20220101   # Japanese Uncyclopedia Image"
+    echo "          XTBook fandom jabrain 20220101             # Japanese Brain Wiki"
+    echo "          XTBook ja-wiki.xml jasomewiki 20220101     # XML dump"
+    echo
+    echo "Hints:"
+    echo "* You may need to visit each dump file's distribution web site to obtain its actual name and release date."
+    echo "* This script fails when your specified wiki doesn't provide its dump file or you give it wrong information."
+    echo "* You may see warnings related to info.plist since I provide only a few as preset."
+    echo "  You can create it for your preferred wiki by customizing presets and adding it to the created .xtbdict folder manually."
+    echo "* To convert a MediaWiki which this script doesn't support, download/extract its XML dump file manually and specify it at [Source]."
+    echo "* You don't need a 7z archive to use the dictionary on XTBook, and you can cancel the process if you don't need it."
+    echo "  It's basically just for me; needs to keep the OSDN repository updated."
+    echo "* Check the console log when you find the converted data corrupted. You may find the reason there."
+    echo "* Make sure you have *official 7-zip command line tool (7zz, not p7zip)* and *ImageMagick* installed."
+    exit
+fi
+
+mkdir -p ${DICTDIR}
+cd ${DICTDIR}
+if [ $1 = "wikimedia" ]; then
+    echo "Downloading and extracting an XML dump, and running MkXTBWikiplexus..."
+    wget -O dict.bz2 https://dumps.wikimedia.org/$2/$3/$2-$3-pages-articles.xml.bz2
+    bunzip2 dict.bz2
+    ${MKXTBDIR}/MkXTBWikiplexus-bin -o $2-$3.xtbdict < dict &> /dev/null
+
+elif [ $1 = "uncyclomedia" ]; then
+    if [[ $2 = *unwikiimg ]]; then
+        mkdir ${2%%unwikiimg*}-images
+        echo "Downloading and extracting images..."
+        curl -fLO https://download.uncyc.org/${2%%unwikiimg*}-images.zip
+        unzip -oqj ${2%%unwikiimg*}-images.zip -d ${2%%unwikiimg*}-images
+        mkdir resized
+        echo "Converting images..."
+        cd ${2%%unwikiimg*}-images
+        find . -type f -exec basename {} \; -exec convert {} -quality 85 -resize 800x480\> ../resized/{}.jpg \;
+        cd ..
+        echo "Running MkImageComplex..."
+        find resized -name "*.jpg" | ${MKXTBDIR}/MkImageComplex-bin -o $2-$3.xtbdict &> /dev/null
+        rm -rf resized ${2%%unwikiimg*}-images $2-$3.xtbdict/Titles.txt ${2%%unwikiimg*}-images.zip
+        if [ -e ${PLIST}/$2.plist ]; then
+            cp ${PLIST}/$2.plist $2-$3.xtbdict/info.plist
+            echo -n "Creating a 7z archive..."
+            7zz a -mx=9 ${7ZFLAG} $1-$2.xtbdict.7z $1-$2.xtbdict
+        else
+            echo "WARNING: No preset info.plist for this wiki found. You must add it yourself manually to make the created dictionary recognizable by XTBook."
+            echo "WARNING: Skipping a 7z archive creation as info.plist is missing."
+        fi
+        echo "Done."
+        exit
+
+    elif [[ $2 = *unwiki ]]; then
+        echo "Downloading and extracting an XML dump, and running MkXTBWikiplexus..."
+        curl -fL https://download.uncyc.org/${2%%unwiki*}-wiki.xml.bz2 | bunzip2 | ${MKXTBDIR}/MkXTBWikiplexus-bin -o $2-$3.xtbdict &> /dev/null
+
+    else
+        echo "Error: Given [WikiName] isn't *unwiki or *unwikiimg."
+        echo "Note: You must follow this naming rule for Uncyclopedia since it's hardcoded in this script."
+        exit 1
+    fi
+
+elif [ $1 = "fandom" ]; then
+    echo "Downloading and extracting an XML dump, and running MkXTBWikiplexus..."
+    curl -fLO https://s3.amazonaws.com/wikia_xml_dumps/${2:0:1}/${2:0:2}/$2_pages_current.xml.7z
+    7zz x $2_pages_current.xml.7z -so | ${MKXTBDIR}/MkXTBWikiplexus-bin -o $2-$3.xtbdict &> /dev/null
+    rm -f $2_pages_current.xml.7z
+
+elif [[ $1 = *.xml ]]; then
+    echo "Running MkXTBWikiplexus..."
+    ${MKXTBDIR}/MkXTBWikiplexus-bin -o $2-$3.xtbdict < $1 &> /dev/null
+
+else
+    echo "Error: Source $1 is not supported."
+    echo "Supported sources: wikimedia, uncyclomedia, fandom, *.xml. *.xml is your xml dump file's name."
+    exit 1
+fi
+
+cd $2-$3.xtbdict
+echo "Running YomiGenesis..."
+${MKXTBDIR}/YomiGenesis-bin < BaseNames.csv > Yomi.txt 2> /dev/null
+
+echo "Running MkXTBIndexDB..."
+${MKXTBDIR}/MkXTBIndexDB-bin -o Search Yomi.txt
+
+echo "Compressing the converted article with MkRax..."
+${MKXTBDIR}/MkRax-bin -o Articles.db.rax  < Articles.db
+rm -f Articles.db Yomi.txt BaseNames.csv Titles.csv
+
+if [ -e ${PLIST}/$2.plist ]; then
+    cp ${PLIST}/$2.plist info.plist
+    cd ..
+    echo -n "Creating a 7z archive..."
+    7zz a -mx=9 ${7ZFLAG} $2-$3.xtbdict.7z $2-$3.xtbdict
+else
+    echo "WARNING: No preset info.plist for this wiki found. You must add it yourself manually to make the created dictionary recognizable by XTBook."
+    echo "WARNING: Skipping a 7z archive creation as info.plist is missing."
+fi
+
+echo "Done."
