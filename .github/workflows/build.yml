@@ -1,0 +1,69 @@
+name: Build
+
+on:
+  schedule:
+    - cron: 0 12 3 * *
+  workflow_dispatch:
+
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }} # Supplied by actions/create-release
+      yearmonth: ${{ steps.time.outputs.yearmonth }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Get current date and time
+        env: 
+          TZ: "Asia/Tokyo"
+        id: time
+        run: |
+          echo "::set-output name=time::$(date +'%Y-%m-%d %H:%M') JST"
+          echo "::set-output name=yearmonth::$(date +'%Y%m')"
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.time.outputs.yearmonth }}
+          release_name: ${{ steps.time.outputs.time }}
+          body: |-
+            The automatic generation of these XTBook dictionary files (.xtbdict) is started at ${{ steps.time.outputs.time }}. Visit [Actions](https://github.com/watamario15/xtbook/actions) for progress. You must extract a downloaded file with 7-Zip before using it on XTBook. You may find some MediaWiki based Wikis that are not distributed below, such as Brain Wiki and English Wikipedia at [OSDN](https://osdn.net/projects/xtbook/). For a wiki site by Wikimedia Foundation that we aren't currently generating, make an [issue](https://github.com/watamario15/xtbook/issues) to request it. You can find license information [here](https://ja.osdn.net/projects/xtbook/wiki/FrontPage).
+
+            ${{ steps.time.outputs.time }} に自動生成が開始された XTBook 辞書ファイル (.xtbdict) です。進捗状況は [Actions](https://github.com/watamario15/xtbook/actions) をご確認ください。ダウンロードしたファイルは、最初に 7-Zip 等を用いて展開する必要があります。Uncyclopedia の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、[OSDN](https://ja.osdn.net/projects/xtbook/) で手動配布しています。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://ja.osdn.net/projects/xtbook/wiki/FrontPage)から確認してください。
+  
+  dictgen:
+    name: Generate XTBook dictionaries
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        wiki: [jawiki, jawikibooks, jawikinews, jawikiquote, jawikisource, jawiktionary, eowiki, specieswiki] # enwiki is too big to build on GitHub Actions
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O ${{ matrix.wiki }}.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/${{ matrix.wiki }}.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          export XTB_7ZFLAG="-v1900m"
+          ./XTBook wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: shogo82148/actions-upload-release-asset@v1.6.2
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: "*.xtbdict.7z*"
+          asset_content_type: application/x-7z-compressed
