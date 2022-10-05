@@ -2,7 +2,7 @@ name: Build
 
 on:
   push:
-    tags: '*'
+    tags: '*' # debug
   schedule:
     - cron: 0 3 5 * *
   workflow_dispatch:
@@ -52,6 +52,7 @@ jobs:
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
           sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          ls -la $GITHUB_WORKSPACE # debug
           
       - name: Convert
         run: DICTDIR=$GITHUB_WORKSPACE MKXTBDIR=$GITHUB_WORKSPACE PLIST=$GITHUB_WORKSPACE ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
