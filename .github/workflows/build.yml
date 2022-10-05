@@ -52,6 +52,7 @@ jobs:
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
           sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          ldd `ls` # debug
           
       - name: Convert
         run: |
