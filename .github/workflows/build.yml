@@ -54,7 +54,11 @@ jobs:
           ls -la ${{ github.workspace }}/build.unix
           
       - name: Convert
-        run: DICTDIR="${{ github.workspace }}" MKXTBDIR="${{ github.workspace }}/build.unix" PLIST="${{ github.workspace }}" ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}/build.unix"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
         uses: actions/upload-release-asset@latest
