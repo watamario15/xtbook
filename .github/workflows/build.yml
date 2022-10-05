@@ -58,7 +58,7 @@ jobs:
           export DICTDIR="${{ github.workspace }}"
           export MKXTBDIR="${{ github.workspace }}"
           export PLIST="${{ github.workspace }}"
-          export XTB_7ZFLAG="-v2g"
+          export XTB_7ZFLAG="-v1900m"
           ./XTBook wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
