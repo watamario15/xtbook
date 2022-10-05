@@ -54,7 +54,7 @@ jobs:
           sudo apt install -y libc6 mecab libmecab-dev mecab-ipadic-utf8 kakasi libkakasi2-dev libxml2-dev liblzma-dev
           
       - name: Convert
-        run: DICTDIR="$GITHUB_WORKSPACE" MKXTBDIR="$GITHUB_WORKSPACE/build.unix" PLIST="$GITHUB_WORKSPACE" ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
+        run: DICTDIR="${{ github.workspace }}" MKXTBDIR="${{ github.workspace }}/build.unix" PLIST="${{ github.workspace }}" ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
         uses: actions/upload-release-asset@latest
