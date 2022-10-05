@@ -1,10 +1,8 @@
 name: Build
 
 on:
-  push:
-    tags: '*' # debug
   schedule:
-    - cron: 0 3 5 * *
+    - cron: 0 15 4 * *
   workflow_dispatch:
 
 jobs:
@@ -39,8 +37,101 @@ jobs:
             ${{ steps.time.outputs.time }} に自動生成された XTBook 辞書ファイル (.xtbdict) です。ダウンロードしたファイルは、最初に 7-Zip 等を用いて展開する必要があります。
           prerelease: true
   
+  jawiki:
+    name: Japanese Wikipedia
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O jawiki.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawiki.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawiki ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: jawiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: jawiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  enwiki:
+    name: English Wikipedia
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O enwiki.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/enwiki.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia enwiki ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: enwiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: enwiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  eowiki:
+    name: Esperanto Wikipedia
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O eowiki.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/eowiki.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia eowiki ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: eowiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: eowiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
   jawikibooks:
-    name: Build Japanese Wikibooks
+    name: Japanese Wikibooks
     needs: [create_release]
     runs-on: ubuntu-22.04
     steps:
@@ -52,7 +143,6 @@ jobs:
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
           sudo apt install -y mecab-ipadic libmecab2 libkakasi2
-          ldd *-bin # debug
           
       - name: Convert
         run: |
@@ -69,4 +159,159 @@ jobs:
           upload_url: ${{ needs.create_release.outputs.upload_url }}
           asset_path: jawikibooks-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
           asset_name: jawikibooks-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  jawikinews:
+    name: Build Japanese Wikinews
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O jawikinews.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikinews.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawikinews ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: jawikinews-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: jawikinews-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  jawikiquote:
+    name: Build Japanese Wikiquote
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O jawikiquote.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikiquote.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawikiquote ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: jawikiquote-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: jawikiquote-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  jawikisource:
+    name: Build Japanese Wikisource
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O jawikisource.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikisource.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawikisource ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: jawikisource-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: jawikisource-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  jawiktionary:
+    name: Build Japanese Wiktionary
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O jawiktionary.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawiktionary.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia jawiktionary ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: jawiktionary-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: jawiktionary-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_content_type: application/x-7z-compressed
+  
+  specieswiki:
+    name: Build Japanese Wikispecies
+    needs: [create_release]
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Prepare XTBook Converter
+        run: |
+          wget -O xtbookconv.7z https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+          7z x xtbookconv.7z
+          wget -O specieswiki.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/specieswiki.plist
+          wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
+          chmod +x XTBook
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+          
+      - name: Convert
+        run: |
+          export DICTDIR="${{ github.workspace }}"
+          export MKXTBDIR="${{ github.workspace }}"
+          export PLIST="${{ github.workspace }}"
+          ./XTBook wikimedia specieswiki ${{ needs.create_release.outputs.yearmonth }}01
+       
+      - name: Release
+        uses: actions/upload-release-asset@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.create_release.outputs.upload_url }}
+          asset_path: specieswiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
+          asset_name: specieswiki-${{ needs.create_release.outputs.yearmonth }}01.xtbdict.7z
           asset_content_type: application/x-7z-compressed
