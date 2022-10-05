@@ -51,14 +51,14 @@ jobs:
           wget -O jawikibooks.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikibooks.plist
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
-          ls -la ${{ github.workspace }}/build.unix
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
           
       - name: Convert
-        run: |
-          export DICTDIR="${{ github.workspace }}"
-          export MKXTBDIR="${{ github.workspace }}/build.unix"
-          export PLIST="${{ github.workspace }}"
-          ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
+        env:
+          DICTDIR: "${{ github.workspace }}"
+          MKXTBDIR: "${{ github.workspace }}"
+          PLIST: "${{ github.workspace }}"
+        run: ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
         uses: actions/upload-release-asset@latest
