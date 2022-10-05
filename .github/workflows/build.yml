@@ -54,11 +54,7 @@ jobs:
           sudo apt install -y mecab-ipadic libmecab2 libkakasi2
           
       - name: Convert
-        env:
-          DICTDIR: "${{ github.workspace }}"
-          MKXTBDIR: "${{ github.workspace }}"
-          PLIST: "${{ github.workspace }}"
-        run: ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
+        run: DICTDIR=$GITHUB_WORKSPACE MKXTBDIR=$GITHUB_WORKSPACE PLIST=$GITHUB_WORKSPACE ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
         uses: actions/upload-release-asset@latest
