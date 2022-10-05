@@ -56,7 +56,7 @@ jobs:
       - name: Convert
         run: |
           export DICTDIR="${{ github.workspace }}"
-          export MKXTBDIR="${{ github.workspace }}/build.unix"
+          export MKXTBDIR="${{ github.workspace }}"
           export PLIST="${{ github.workspace }}"
           ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
