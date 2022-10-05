@@ -51,8 +51,8 @@ jobs:
           wget -O jawikibooks.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikibooks.plist
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
-          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
-          ldd `ls` # debug
+          sudo apt install -y libc6 mecab-ipadic libmecab2 libkakasi2
+          ldd *-bin # debug
           
       - name: Convert
         run: |
