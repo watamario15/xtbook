@@ -42,7 +42,7 @@ jobs:
   jawikibooks:
     name: Build Japanese Wikibooks
     needs: [create_release]
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Prepare XTBook Converter
         run: |
@@ -51,7 +51,7 @@ jobs:
           wget -O jawikibooks.plist https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/jawikibooks.plist
           wget -O XTBook https://github.com/watamario15/dotfiles/raw/main/tools/XTBook
           chmod +x XTBook
-          sudo apt install -y libc6 mecab-ipadic libmecab2 libkakasi2
+          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
           ldd *-bin # debug
           
       - name: Convert
