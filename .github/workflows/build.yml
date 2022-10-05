@@ -39,24 +39,6 @@ jobs:
             ${{ steps.time.outputs.time }} に自動生成された XTBook 辞書ファイル (.xtbdict) です。ダウンロードしたファイルは、最初に 7-Zip 等を用いて展開する必要があります。
           prerelease: true
   
-  download-test:
-    name: Check the downloadability of wikimedia server
-    needs: [create_release]
-    runs-on: ubuntu-latest
-    steps:
-      - name: dl
-        run: wget -O jawikibooks-20221001.bz2 https://dumps.wikimedia.org/jawikibooks/20221001/jawikibooks-20221001-pages-articles.xml.bz2
-       
-      - name: Release
-        uses: actions/upload-release-asset@latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ needs.create_release.outputs.upload_url }}
-          asset_path: jawikibooks-${{ needs.create_release.outputs.yearmonth }}01.bz2
-          asset_name: jawikibooks-${{ needs.create_release.outputs.yearmonth }}01.bz2
-          asset_content_type: application/x-bzip2
-  
   jawikibooks:
     name: Build Japanese Wikibooks
     needs: [create_release]
@@ -72,11 +54,7 @@ jobs:
           sudo apt install -y libc6 mecab libmecab-dev mecab-ipadic-utf8 kakasi libkakasi2-dev libxml2-dev liblzma-dev
           
       - name: Convert
-        env:
-          DICTDIR: "~"
-          MKXTBDIR: "~/build.unix"
-          PLIST: "~"
-        run: ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
+        run: DICTDIR="${HOME}" MKXTBDIR="${HOME}/build.unix" PLIST="${HOME}" ./XTBook wikimedia jawikibooks ${{ needs.create_release.outputs.yearmonth }}01
        
       - name: Release
         uses: actions/upload-release-asset@latest
