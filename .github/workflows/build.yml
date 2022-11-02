@@ -2,7 +2,7 @@ name: Build
 
 on:
   schedule:
-    - cron: 0 15 4 * *
+    - cron: 0 12 3 * *
   workflow_dispatch:
 
 jobs:
@@ -32,9 +32,9 @@ jobs:
           tag_name: ${{ steps.time.outputs.yearmonth }}
           release_name: ${{ steps.time.outputs.time }}
           body: |-
-            XTBook dictionary files (.xtbdict) generated at ${{ steps.time.outputs.time }}. Visit [Actions](https://github.com/watamario15/xtbook/actions) for progress. You must extract a downloaded file with 7-Zip before using it on XTBook. You may find some MediaWiki based Wikis that are not distributed below, such as Brain Wiki and English Wikipedia at [OSDN](https://osdn.net/projects/xtbook/). You can find license information [here](https://ja.osdn.net/projects/xtbook/wiki/FrontPage).
+            The automatic generation of these XTBook dictionary files (.xtbdict) is started at ${{ steps.time.outputs.time }}. Visit [Actions](https://github.com/watamario15/xtbook/actions) for progress. You must extract a downloaded file with 7-Zip before using it on XTBook. You may find some MediaWiki based Wikis that are not distributed below, such as Brain Wiki and English Wikipedia at [OSDN](https://osdn.net/projects/xtbook/). For a wiki site by Wikimedia Foundation that we aren't currently generating, make an [issue](https://github.com/watamario15/xtbook/issues) to request it. You can find license information [here](https://ja.osdn.net/projects/xtbook/wiki/FrontPage).
 
-            ${{ steps.time.outputs.time }} に自動生成された XTBook 辞書ファイル (.xtbdict) です。進捗状況は [Actions](https://github.com/watamario15/xtbook/actions) をご確認ください。ダウンロードしたファイルは、最初に 7-Zip 等を用いて展開する必要があります。Uncyclopedia の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、[OSDN](https://ja.osdn.net/projects/xtbook/) で手動配布しています。ライセンス情報は[こちら](https://ja.osdn.net/projects/xtbook/wiki/FrontPage)から確認してください。
+            ${{ steps.time.outputs.time }} に自動生成が開始された XTBook 辞書ファイル (.xtbdict) です。進捗状況は [Actions](https://github.com/watamario15/xtbook/actions) をご確認ください。ダウンロードしたファイルは、最初に 7-Zip 等を用いて展開する必要があります。Uncyclopedia の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、[OSDN](https://ja.osdn.net/projects/xtbook/) で手動配布しています。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://ja.osdn.net/projects/xtbook/wiki/FrontPage)から確認してください。
   
   dictgen:
     name: Generate XTBook dictionaries
