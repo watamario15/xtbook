@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <SDL/SDL.h>
+#include <SDL.h>
 #include <tcw/twEvent.h>
 #include <tcw/twTypes.h>
 #include <wchar.h>
