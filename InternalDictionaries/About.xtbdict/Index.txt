@@ -1,7 +1,7 @@
 <img src="about:XTBookTitle" />
-<p style="text-align: center; color: #666;">Copyright 2011 <a id="nexhawksInfo" href="xtbook:footnote#nexhawksInfo"><div style="display: none;">
+<p style="text-align: center; color: #666;">Copyright 2011-2012 <a id="nexhawksInfo" href="xtbook:footnote#nexhawksInfo"><div style="display: none;">
 <dl>
-<dt><strong>Contacting Nexhawks.net</strong></dt>
+<dt><strong>Contacting Nexhawks</strong></dt>
 <dd></dd>
 <dd><strong>Web: </strong>http://www.nexhawks.net/</dd>
 <dd><strong>Mail: </strong>nh@nexhawks.net</dd>
