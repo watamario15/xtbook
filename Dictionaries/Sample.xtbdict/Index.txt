@@ -1,129 +1,365 @@
-
-<table class="navbox " cellspacing="0" style=";"><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible autocollapse " style="width:100%;background:transparent;color:inherit;;"><tr><th style=";background:#bfd7ff" colspan=3 class="navbox-title"><div style="float:left; width:6em;text-align:left;"><div class="noprint plainlinksneverexpand" style="background-color:transparent; padding:0; font-size:75%; color:#000000; white-space:nowrap; font-weight:normal; ;background:#bfd7ff;border:none;;  "><a href="jawiki&#58;Template&#58;富士山"><span title="このテンプレートを表示します" style=";background:#bfd7ff;border:none;;">表</span></a><span style="font-size:80%;">・</span><a href="jawiki&#58;Template‐ノート&#58;富士山"><span style="color:#002bb8;;background:#bfd7ff;border:none;;" title="このテンプレートのノートを表示します">話</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#bfd7ff;border:none;;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#bfd7ff;border:none;;" title="このテンプレートの過去の版を表示します">歴</span></a></div></div><span class="" style="font-size:110%;">
-富士山の地理</span></th></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-group " style=";background:#bfd7ff;">スポット</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;剣ヶ峰_(富士山)">剣ヶ峰</a>（<a href="jawiki&#58;八神峰">八神峰</a>） - <a href="jawiki&#58;富士山本宮浅間大社#.5965.5bae.5883.5185">富士山本宮浅間大社奥宮</a> - <a href="jawiki&#58;久須志神社_(富士山)">久須志神社</a> - <a href="jawiki&#58;富士山頂郵便局">富士山頂郵便局</a> - <a href="jawiki&#58;大沢崩れ">大沢崩れ</a></div></td><td style="width:0%;padding:0px 0px 0px 2px;" rowspan=7>
-<a href="jawikiimg&#58;Mt_Fuji_ESC_large_ISS002_ISS002-E-6971_1650x1100.jpg"><img src="jawikiimg&#58;Mt_Fuji_ESC_large_ISS002_ISS002-E-6971_1650x1100.jpg" width="150" /></a></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#bfd7ff;">登山関係</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;富士登山">富士登山</a>（富士宮口・須走口・御殿場口・吉田口） - <a href="jawiki&#58;お鉢巡り">お鉢巡り</a> - <a href="jawiki&#58;宝永山#.5b9d.6c38.904a.6b69.9053">宝永遊歩道</a> - <a href="jawiki&#58;御中道">御中道</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#bfd7ff;">寄生火山</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;宝永山">宝永山</a> - <a href="jawiki&#58;大室山_(富士山)">大室山</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#bfd7ff;">資料</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;富士山の噴火史">富士山の噴火史</a>（<a href="jawiki&#58;宝永大噴火">宝永大噴火</a>・<a href="jawiki&#58;貞観大噴火">貞観大噴火</a>） - <a href="jawiki&#58;富士山の火山防災対策">富士山の火山防災対策</a> - <a href="jawiki&#58;古富士泥流">古富士泥流</a> - <a href="jawiki&#58;ハザードマップ">富士山火山防災マップ</a></div></td></tr></table></td></tr></table>
-
-<table class="navbox " cellspacing="0" style=";"><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible autocollapse " style="width:100%;background:transparent;color:inherit;;"><tr><th style=";" colspan=2 class="navbox-title"><div style="float:left; width:6em;text-align:left;"><div class="noprint plainlinksneverexpand" style="background-color:transparent; padding:0; font-size:75%; color:#000000; white-space:nowrap; font-weight:normal; ;;border:none;;  "><a href="jawiki&#58;Template&#58;日本の山一覧_(3000m峰)"><span title="このテンプレートを表示します" style=";;border:none;;">表</span></a><span style="font-size:80%;">・</span><a href="jawiki&#58;Template‐ノート&#58;日本の山一覧_(3000m峰)"><span style="color:#002bb8;;;border:none;;" title="このテンプレートのノートを表示します">話</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;;border:none;;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;;border:none;;" title="このテンプレートの過去の版を表示します">歴</span></a></div></div><span class="" style="font-size:110%;">
-<a href="jawiki&#58;日本の山一覧_(3000m峰)">日本の山一覧 (3000m峰)</a></span></th></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-group " style=";;">独立峰</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<b>富士山</b> - <a href="jawiki&#58;御嶽山_(長野県)">御嶽山</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";;"><a href="jawiki&#58;飛騨山脈">飛騨山脈</a>（北アルプス）</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;穂高岳">奥穂高岳</a> - <a href="jawiki&#58;槍ヶ岳">槍ヶ岳</a> - <a href="jawiki&#58;穂高岳">涸沢岳</a> - <a href="jawiki&#58;穂高岳">北穂高岳</a> - <a href="jawiki&#58;大喰岳">大喰岳</a> - <a href="jawiki&#58;穂高岳">前穂高岳</a> - <a href="jawiki&#58;中岳_(北アルプス)">中岳</a> - <a href="jawiki&#58;南岳">南岳</a> - <a href="jawiki&#58;乗鞍岳">乗鞍岳</a>  - <a href="jawiki&#58;立山">立山（大汝山）</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";;"><a href="jawiki&#58;赤石山脈">赤石山脈</a>（南アルプス）</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;北岳">北岳</a> - <a href="jawiki&#58;間ノ岳">間ノ岳</a> - <a href="jawiki&#58;荒川岳">悪沢岳</a> - <a href="jawiki&#58;赤石岳">赤石岳</a> - <a href="jawiki&#58;荒川岳">荒川中岳</a> - <a href="jawiki&#58;農鳥岳">西農鳥岳</a> - <a href="jawiki&#58;塩見岳">塩見岳</a> - <a href="jawiki&#58;仙丈ヶ岳">仙丈ヶ岳</a> - <a href="jawiki&#58;聖岳">聖岳</a></div></td></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-abovebelow " style=";background-color:#eee;" colspan="2">
-<a href="jawiki&#58;日本の山一覧">日本の山一覧</a> - <a href="jawiki&#58;日本の山一覧_(高さ順)">日本の山一覧 (高さ順)</a> - <a href="jawiki&#58;火山の一覧_(日本)">火山の一覧_(日本)</a> - <a href="jawiki&#58;日本百名山">日本百名山</a> - <a href="jawiki&#58;日本二百名山">日本二百名山</a> - <a href="jawiki&#58;日本三百名山">日本三百名山</a> - <a href="jawiki&#58;新日本百名山">新日本百名山</a>  - <a href="jawiki&#58;花の百名山">花の百名山</a>  - <a href="jawiki&#58;新・花の百名山">新・花の百名山</a></td></tr></table></td></tr></table>
-<table class="navbox " cellspacing="0" style=";"><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible autocollapse " style="width:100%;background:transparent;color:inherit;;"><tr><th style=";background:#6ef" colspan=2 class="navbox-title"><div style="float:left; width:6em;text-align:left;"><div class="noprint plainlinksneverexpand" style="background-color:transparent; padding:0; font-size:75%; color:#000000; white-space:nowrap; font-weight:normal; ;background:#6ef;border:none;;  "><a href="jawiki&#58;Template&#58;日本百名山"><span title="このテンプレートを表示します" style=";background:#6ef;border:none;;">表</span></a><span style="font-size:80%;">・</span><a href="jawiki&#58;Template‐ノート&#58;日本百名山"><span style="color:#002bb8;;background:#6ef;border:none;;" title="このテンプレートのノートを表示します">話</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#6ef;border:none;;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#6ef;border:none;;" title="このテンプレートの過去の版を表示します">歴</span></a></div></div><span class="" style="font-size:110%;">
-<a href="jawiki&#58;日本百名山">日本百名山</a></span></th></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-group " style=";background:#cee;"><a href="jawiki&#58;北海道">北海道</a></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"><a href="jawiki&#58;利尻岳">利尻岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;羅臼岳">羅臼岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;斜里岳">斜里岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;雌阿寒岳">阿寒岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;大雪山">大雪山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;トムラウシ山">トムラウシ山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;十勝岳">十勝岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;幌尻岳">幌尻岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;羊蹄山">後方羊蹄山</a> </span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#cee;"><a href="jawiki&#58;東北地方">東北</a>・<a href="jawiki&#58;上野国">上</a><a href="jawiki&#58;信濃国">信</a><a href="jawiki&#58;越後国">越</a></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"><a href="jawiki&#58;岩木山">岩木山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;八甲田山">八甲田山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;八幡平">八幡平</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;岩手山">岩手山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;早池峰山">早池峰</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;鳥海山">鳥海山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;月山">月山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;朝日岳_(山形県・新潟県)">朝日岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;蔵王連峰">蔵王山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;飯豊山">飯豊山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;吾妻山">吾妻山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;安達太良山">安達太良山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;磐梯山">磐梯山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;会津駒ヶ岳">会津駒ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;越後駒ヶ岳">魚沼駒ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;平ヶ岳_(群馬県・新潟県)">平ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;巻機山">巻機山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;燧ヶ岳">燧岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;至仏山">至仏山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;谷川岳">谷川岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;苗場山">苗場山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;妙高山">妙高山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;火打山">火打山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;高妻山">高妻山</a></span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#cee;"><a href="jawiki&#58;関東地方">関東</a></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"> <a href="jawiki&#58;男体山">男体山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;日光白根山">奥白根山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;那須岳">那須岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;皇海山">皇海山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;武尊山">武尊山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;赤城山">赤城山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;草津白根山">草津白根山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;四阿山">四阿山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;浅間山">浅間山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;筑波山">筑波山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;丹沢山">丹沢山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;両神山">両神山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;雲取山">雲取山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;甲武信ヶ岳">甲武信岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;金峰山_(山梨県・長野県)">金峰山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;瑞牆山">瑞牆山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;大菩薩嶺">大菩薩岳</a></span> - <span style="white-space:nowrap"> <b>富士山</b></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;天城山">天城山</a></span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#cee;"><a href="jawiki&#58;中部地方">中部山岳</a></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-</div><table cellspacing="0" class="nowraplinks  navbox-subgroup" style="width:100%;;;;"><tr><td class="navbox-group " style=";padding-left:0em;padding-right:0em;background-color:#dff;;"><div style="padding:0em 0.75em;"><a href="jawiki&#58;飛騨山脈">飛騨山脈（北アルプス）</a></div></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"> <a href="jawiki&#58;白馬岳">白馬岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;五竜岳">五竜岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;鹿島槍ヶ岳">鹿島槍ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;剱岳">剱岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;立山">立山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;薬師岳">薬師岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;黒部五郎岳">黒部五郎岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;水晶岳">黒岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;鷲羽岳">鷲羽岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;槍ヶ岳">槍ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;穂高岳">穂高岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;常念岳">常念岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;笠ヶ岳">笠ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;焼岳">焼岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;乗鞍岳">乗鞍岳</a></span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";padding-left:0em;padding-right:0em;background-color:#dff;;"><div style="padding:0em 0.75em;"><a href="jawiki&#58;木曽山脈">木曽山脈（中央アルプス）</a></div></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"> <a href="jawiki&#58;木曽駒ヶ岳">木曽駒ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;空木岳">空木岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;恵那山">恵那山</a></span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";padding-left:0em;padding-right:0em;background-color:#dff;;"><div style="padding:0em 0.75em;"><a href="jawiki&#58;赤石山脈">赤石山脈（南アルプス）</a></div></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"> <a href="jawiki&#58;甲斐駒ヶ岳">甲斐駒ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;仙丈ヶ岳">仙丈ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;鳳凰山">鳳凰山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;北岳">北岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;間ノ岳">間ノ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;塩見岳">塩見岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;荒川岳">悪沢岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;赤石岳">赤石岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;聖岳">聖岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;光岳">光岳</a></span ></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";padding-left:0em;padding-right:0em;background-color:#dff;;"><div style="padding:0em 0.75em;">その他</div></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"> <a href="jawiki&#58;御嶽山_(長野県)">御嶽山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;美ヶ原">美ヶ原</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;霧ヶ峰">霧ヶ峰</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;蓼科山">蓼科山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;八ヶ岳">八ヶ岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;雨飾山">雨飾山</a><br/><a href="jawiki&#58;白山">白山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;荒島岳">荒島岳</a>  </span ></div></td></tr></table><div></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#cee;"><a href="jawiki&#58;西日本">西日本</a></td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<span style="white-space:nowrap"><a href="jawiki&#58;伊吹山">伊吹山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;大台ヶ原山">大台ヶ原山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;大峰山">大峰山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;大山_(鳥取県)">大山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;剣山">剣山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;石鎚山">石鎚山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;九重山">九重山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;祖母山">祖母山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;阿蘇山">阿蘇山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;霧島山">霧島山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;開聞岳">開聞岳</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;宮之浦岳">宮ノ浦岳</a></span ></div></td></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-abovebelow " style=";background-color:#eee;" colspan="2">
-<span style="white-space:nowrap"> <a href="jawiki&#58;深田久弥">深田久弥</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;日本二百名山">日本二百名山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;日本三百名山">日本三百名山</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;日本の山一覧">日本の山一覧</a></span> - <span style="white-space:nowrap"> <a href="jawiki&#58;commons&#58;Category&#58;100_Famous_Japanese_Mountains">Commons</a></span ></td></tr></table></td></tr></table>
-<table class="navbox " cellspacing="0" style=";"><tr><td style="padding:2px;"><table cellspacing="0" class="nowraplinks collapsible autocollapse " style="width:100%;background:transparent;color:inherit;;"><tr><th style=";background:#fc2" colspan=2 class="navbox-title"><div style="float:left; width:6em;text-align:left;"><div class="noprint plainlinksneverexpand" style="background-color:transparent; padding:0; font-size:75%; color:#000000; white-space:nowrap; font-weight:normal; ;background:#fc2;border:none;;  "><a href="jawiki&#58;Template&#58;山梨百名山"><span title="このテンプレートを表示します" style=";background:#fc2;border:none;;">表</span></a><span style="font-size:80%;">・</span><a href="jawiki&#58;Template‐ノート&#58;山梨百名山"><span style="color:#002bb8;;background:#fc2;border:none;;" title="このテンプレートのノートを表示します">話</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#fc2;border:none;;" title="このテンプレートを編集します。保存の前にプレビューを忘れずに。">編</span></a><span style="font-size:80%;">・</span><a href="http://?"><span style="color:#002bb8;;background:#fc2;border:none;;" title="このテンプレートの過去の版を表示します">歴</span></a></div></div><span class="" style="font-size:110%;">
-<a href="jawiki&#58;山梨百名山">山梨百名山</a></span></th></tr><tr style="height:2px;"><td></td></tr><tr><td class="navbox-group " style=";background:#fea;"><a href="jawiki&#58;大菩薩連嶺">大菩薩</a>・<a href="jawiki&#58;道志山塊">道志</a>山系</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;大菩薩嶺">大菩薩嶺</a> &#124; <a href="jawiki&#58;小金沢山">小金沢山</a> &#124; <a href="jawiki&#58;雁ヶ腹摺山">雁ヶ腹摺山</a> &#124; <a href="jawiki&#58;大蔵高丸">大蔵高丸</a> &#124; <a href="jawiki&#58;滝子山">滝子山</a> &#124; <a href="jawiki&#58;笹子雁ヶ腹摺山">笹子雁ヶ腹摺山</a> &#124; <a href="jawiki&#58;源次郎岳">源次郎岳</a> &#124; <a href="jawiki&#58;棚横手山">棚横手山</a> &#124; <a href="jawiki&#58;本社ヶ丸">本社ヶ丸</a> &#124; <a href="jawiki&#58;高川山">高川山</a> &#124; <a href="jawiki&#58;三頭山_(東京都)">三頭山</a> &#124; <a href="jawiki&#58;権現山_(山梨県)">権現山</a> &#124; <a href="jawiki&#58;扇山_(大月市)">扇山</a> &#124; <a href="jawiki&#58;百蔵山">百蔵山</a> &#124; <a href="jawiki&#58;岩殿山城#.5ca9.6bbf.5c71">岩殿山</a> &#124; <a href="jawiki&#58;高柄山">高柄山</a> &#124; <a href="jawiki&#58;倉岳山">倉岳山</a> &#124; <a href="jawiki&#58;九鬼山">九鬼山</a> &#124; <a href="jawiki&#58;二十六夜山_(山梨県上野原市)">二十六夜山</a> &#124; <a href="jawiki&#58;菜畑山">菜畑山</a> &#124; <a href="jawiki&#58;今倉山">今倉山</a> &#124; <a href="jawiki&#58;御正体山">御正体山</a> &#124; <a href="jawiki&#58;石割山">石割山</a> &#124; <a href="jawiki&#58;杓子山">杓子山</a> &#124; <a href="jawiki&#58;大室山_(丹沢)">大室山</a> &#124; <a href="jawiki&#58;鳥ノ胸山">鳥ノ胸山</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#fea;"><a href="jawiki&#58;赤石山脈">赤石</a>・<a href="jawiki&#58;身延山地">身延</a>山系</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;雨乞岳_(山梨県)">雨乞岳</a> &#124; <a href="jawiki&#58;日向山_(山梨県)">日向山</a> &#124; <a href="jawiki&#58;鋸岳_(赤石山脈)">鋸岳</a> &#124; <a href="jawiki&#58;甲斐駒ヶ岳">甲斐駒ヶ岳</a> &#124; <a href="jawiki&#58;アサヨ峰">アサヨ峰</a> &#124; <a href="jawiki&#58;仙丈ヶ岳">仙丈ヶ岳</a> &#124; <a href="jawiki&#58;小太郎山">小太郎山</a> &#124; <a href="jawiki&#58;北岳">北岳</a> &#124; <a href="jawiki&#58;間ノ岳">間ノ岳</a> &#124; <a href="jawiki&#58;農鳥岳">農鳥岳</a> &#124; <a href="jawiki&#58;黒河内岳">笹山</a> &#124; <a href="jawiki&#58;笊ヶ岳">笊ヶ岳</a> &#124; <a href="jawiki&#58;鳳凰山">鳳凰山</a> &#124; <a href="jawiki&#58;甘利山">甘利山</a> &#124; <a href="jawiki&#58;千頭星山">千頭星山</a> &#124; <a href="jawiki&#58;櫛形山_(山梨県)">櫛形山</a> &#124; <a href="jawiki&#58;源氏山_(山梨県)">源氏山</a> &#124; <a href="jawiki&#58;富士見山">富士見山</a> &#124; <a href="jawiki&#58;身延山">身延山</a> &#124; <a href="jawiki&#58;七面山">七面山</a> &#124; <a href="jawiki&#58;八紘嶺">八紘嶺</a> &#124; <a href="jawiki&#58;山伏_(赤石山脈)">山伏</a> &#124; <a href="jawiki&#58;十枚山">十枚山</a> &#124; <a href="jawiki&#58;篠井山">篠井山</a> &#124; <a href="jawiki&#58;貫ヶ岳">貫ヶ岳</a> &#124; <a href="jawiki&#58;高ドッキョウ">高ドッキョウ</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#fea;">富士・<a href="jawiki&#58;御坂山地">御坂</a>山系</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-odd"><div style="padding:0em 0.25em">
-<b>富士山</b> &#124; <a href="jawiki&#58;三つ峠">三ッ峠山</a> &#124; <a href="jawiki&#58;達沢山">達沢山</a> &#124; <a href="jawiki&#58;黒岳_(御坂山地)">黒岳</a> &#124; <a href="jawiki&#58;釈迦ヶ岳_(山梨県)">釈迦ヶ岳</a> &#124; <a href="jawiki&#58;大栃山">大栃山</a> &#124; <a href="jawiki&#58;春日山_(山梨県)">春日山</a> &#124; <a href="jawiki&#58;滝戸山">滝戸山</a> &#124; <a href="jawiki&#58;節刀ヶ岳">節刀ヶ岳</a> &#124; <a href="jawiki&#58;十二ヶ岳_(山梨県)">十二ヶ岳</a> &#124; <a href="jawiki&#58;王岳">王岳</a> &#124; <a href="jawiki&#58;三方分山">三方分山</a> &#124; <a href="jawiki&#58;蛾ヶ岳">蛾ヶ岳</a> &#124; <a href="jawiki&#58;足和田山">足和田山</a> &#124; <a href="jawiki&#58;竜ヶ岳_(山梨県)">竜ヶ岳</a> &#124; <a href="jawiki&#58;毛無山_(山梨県・静岡県)">毛無山</a> &#124; <a href="jawiki&#58;長者ヶ岳">長者ヶ岳</a> &#124; <a href="jawiki&#58;三石山_(山梨県)">三石山</a> &#124; <a href="jawiki&#58;思親山">思親山</a> &#124; <a href="jawiki&#58;白鳥山_(山梨県・静岡県)">白鳥山</a></div></td></tr><tr style="height:2px"><td></td></tr><tr><td class="navbox-group " style=";background:#fea;"><a href="jawiki&#58;八ヶ岳">八ヶ岳</a>・<a href="jawiki&#58;奥秩父山塊">秩父</a>山系</td><td style="text-align:left;border-left-width:2px;border-left-style:solid;width:100%;padding:0px;;;" class="navbox-list navbox-even"><div style="padding:0em 0.25em">
-<a href="jawiki&#58;赤岳_(八ヶ岳山系)">赤岳</a> &#124; <a href="jawiki&#58;権現岳_(八ヶ岳)">権現岳</a> &#124; <a href="jawiki&#58;編笠山">編笠山</a> &#124; <a href="jawiki&#58;横尾山">横尾山</a> &#124; <a href="jawiki&#58;小川山">小川山</a> &#124; <a href="jawiki&#58;瑞牆山">瑞牆山</a> &#124; <a href="jawiki&#58;金峰山_(山梨県・長野県)">金峰山</a> &#124; <a href="jawiki&#58;国師岳">国師岳</a> &#124; <a href="jawiki&#58;甲武信ヶ岳">甲武信ヶ岳</a> &#124; <a href="jawiki&#58;鶏冠山_(山梨県山梨市)">鶏冠山</a> &#124; <a href="jawiki&#58;破風山_(奥秩父)">破風山</a> &#124; <a href="jawiki&#58;雁坂嶺">雁坂嶺</a> &#124; <a href="jawiki&#58;笠取山_(奥秩父)">笠取山</a> &#124; <a href="jawiki&#58;飛竜山">飛竜山</a> &#124; <a href="jawiki&#58;雲取山">雲取山</a> &#124; <a href="jawiki&#58;鶏冠山_(山梨県甲州市)">鶏冠山</a> &#124; <a href="jawiki&#58;黒金山_(山梨県)">黒金山</a> &#124; <a href="jawiki&#58;乾徳山">乾徳山</a> &#124; <a href="jawiki&#58;小楢山">小楢山</a> &#124; <a href="jawiki&#58;茅ヶ岳">茅ヶ岳</a> &#124; <a href="jawiki&#58;曲岳">曲岳</a> &#124; <a href="jawiki&#58;黒富士">黒富士</a> &#124; <a href="jawiki&#58;太刀岡山">太刀岡山</a> &#124; <a href="jawiki&#58;羅漢寺山">羅漢寺山</a> &#124; <a href="jawiki&#58;帯那山">帯那山</a> &#124; <a href="jawiki&#58;要害山_(山梨県)">要害山</a> &#124; <a href="jawiki&#58;兜山_(山梨県)">兜山</a> &#124; <a href="jawiki&#58;大蔵経寺山">大蔵経寺山</a></div></td></tr></table></td></tr></table>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<span class="GA" id="fr" style="display:none;"></span>
-<span class="FA" id="ca" style="display:none;"></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</p>
+<table style="text-align:center">
+<tr>
+<th style="vertical-align:bottom; width:2.5em"><a href="/wiki/%E7%AC%AC1%E6%97%8F%E5%85%83%E7%B4%A0" title="第1族元素">1</a></th>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<td style="width:2.5em">&#160;</td>
+<th style="width:2.5em">&#160;<a href="/wiki/%E7%AC%AC18%E6%97%8F%E5%85%83%E7%B4%A0" title="第18族元素">18</a></th>
+</tr>
+<tr>
+<td style="border:solid #999 2px;color:#3f3">1<br />
+<a href="/wiki/%E6%B0%B4%E7%B4%A0" title="水素"><b>H</b></a></td>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC2%E6%97%8F%E5%85%83%E7%B4%A0" title="第2族元素">2</a></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC13%E6%97%8F%E5%85%83%E7%B4%A0" title="第13族元素">13</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC14%E6%97%8F%E5%85%83%E7%B4%A0" title="第14族元素">14</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC15%E6%97%8F%E5%85%83%E7%B4%A0" title="第15族元素">15</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC16%E6%97%8F%E5%85%83%E7%B4%A0" title="第16族元素">16</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC17%E6%97%8F%E5%85%83%E7%B4%A0" title="第17族元素">17</a></th>
+<td style="border:solid #0f9 2px;color:#3f3">2<br />
+<a href="/wiki/%E3%83%98%E3%83%AA%E3%82%A6%E3%83%A0" title="ヘリウム"><b>He</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px; background:#f0f0ff">3<br />
+<a href="/wiki/%E3%83%AA%E3%83%81%E3%82%A6%E3%83%A0" title="リチウム"><b>Li</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">4<br />
+<a href="/wiki/%E3%83%99%E3%83%AA%E3%83%AA%E3%82%A6%E3%83%A0" title="ベリリウム"><b>Be</b></a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td style="border:solid #999 2px; background:#ccffff">5<br />
+<a href="/wiki/%E3%83%9B%E3%82%A6%E7%B4%A0" title="ホウ素"><b>B</b></a></td>
+<td style="border:solid #999 2px">6<br />
+<a href="/wiki/%E7%82%AD%E7%B4%A0" title="炭素"><b>C</b></a></td>
+<td style="border:solid #999 2px; color:#3f3">7<br />
+<a href="/wiki/%E7%AA%92%E7%B4%A0" title="窒素"><b>N</b></a></td>
+<td style="border:solid #999 2px; color:#3f3">8<br />
+<a href="/wiki/%E9%85%B8%E7%B4%A0" title="酸素"><b>O</b></a></td>
+<td style="border:solid #09f 2px; color:#3f3">9<br />
+<a href="/wiki/%E3%83%95%E3%83%83%E7%B4%A0" title="フッ素"><b>F</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3">10<br />
+<a href="/wiki/%E3%83%8D%E3%82%AA%E3%83%B3" title="ネオン"><b>Ne</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px;background:#f0f0ff">11<br />
+<a href="/wiki/%E3%83%8A%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0" title="ナトリウム"><b>Na</b></a></td>
+<td style="border:solid #999 2px;background:#f0f0ff">12<br />
+<a href="/wiki/%E3%83%9E%E3%82%B0%E3%83%8D%E3%82%B7%E3%82%A6%E3%83%A0" title="マグネシウム"><b>Mg</b></a></td>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC3%E6%97%8F%E5%85%83%E7%B4%A0" title="第3族元素">3</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC4%E6%97%8F%E5%85%83%E7%B4%A0" title="第4族元素">4</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC5%E6%97%8F%E5%85%83%E7%B4%A0" title="第5族元素">5</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC6%E6%97%8F%E5%85%83%E7%B4%A0" title="第6族元素">6</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC7%E6%97%8F%E5%85%83%E7%B4%A0" title="第7族元素">7</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC8%E6%97%8F%E5%85%83%E7%B4%A0" title="第8族元素">8</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC9%E6%97%8F%E5%85%83%E7%B4%A0" title="第9族元素">9</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC10%E6%97%8F%E5%85%83%E7%B4%A0" title="第10族元素">10</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC11%E6%97%8F%E5%85%83%E7%B4%A0" title="第11族元素">11</a></th>
+<th style="vertical-align:bottom"><a href="/wiki/%E7%AC%AC12%E6%97%8F%E5%85%83%E7%B4%A0" title="第12族元素">12</a></th>
+<td style="border:solid #999 2px; background:#f0f0ff">13<br />
+<a href="/wiki/%E3%82%A2%E3%83%AB%E3%83%9F%E3%83%8B%E3%82%A6%E3%83%A0" title="アルミニウム"><b>Al</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">14<br />
+<a href="/wiki/%E3%82%B1%E3%82%A4%E7%B4%A0" title="ケイ素"><b>Si</b></a></td>
+<td style="border:solid #999 2px">15<br />
+<a href="/wiki/%E3%83%AA%E3%83%B3" title="リン"><b>P</b></a></td>
+<td style="border:solid #999 2px">16<br />
+<a href="/wiki/%E7%A1%AB%E9%BB%84" title="硫黄"><b>S</b></a></td>
+<td style="border:solid #09f 2px; color:#3f3">17<br />
+<a href="/wiki/%E5%A1%A9%E7%B4%A0" title="塩素"><b>Cl</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3">18<br />
+<a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%B3" title="アルゴン"><b>Ar</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px; background:#f0f0ff">19<br />
+<a href="/wiki/%E3%82%AB%E3%83%AA%E3%82%A6%E3%83%A0" title="カリウム"><b>K</b></a></td>
+<td style="border:solid #9f0 2px; background:#f0f0ff">20<br />
+<a href="/wiki/%E3%82%AB%E3%83%AB%E3%82%B7%E3%82%A6%E3%83%A0" title="カルシウム"><b>Ca</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">21<br />
+<a href="/wiki/%E3%82%B9%E3%82%AB%E3%83%B3%E3%82%B8%E3%82%A6%E3%83%A0" title="スカンジウム"><b>Sc</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">22<br />
+<a href="/wiki/%E3%83%81%E3%82%BF%E3%83%B3" title="チタン"><b>Ti</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">23<br />
+<a href="/wiki/%E3%83%90%E3%83%8A%E3%82%B8%E3%82%A6%E3%83%A0" title="バナジウム"><b>V</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">24<br />
+<a href="/wiki/%E3%82%AF%E3%83%AD%E3%83%A0" title="クロム"><b>Cr</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">25<br />
+<a href="/wiki/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%B3" title="マンガン"><b>Mn</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">26<br />
+<a href="/wiki/%E9%89%84" title="鉄"><b>Fe</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">27<br />
+<a href="/wiki/%E3%82%B3%E3%83%90%E3%83%AB%E3%83%88" title="コバルト"><b>Co</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">28<br />
+<a href="/wiki/%E3%83%8B%E3%83%83%E3%82%B1%E3%83%AB" title="ニッケル"><b>Ni</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">29<br />
+<a href="/wiki/%E9%8A%85" title="銅"><b>Cu</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">30<br />
+<a href="/wiki/%E4%BA%9C%E9%89%9B" title="亜鉛"><b>Zn</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">31<br />
+<a href="/wiki/%E3%82%AC%E3%83%AA%E3%82%A6%E3%83%A0" title="ガリウム"><b>Ga</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">32<br />
+<a href="/wiki/%E3%82%B2%E3%83%AB%E3%83%9E%E3%83%8B%E3%82%A6%E3%83%A0" title="ゲルマニウム"><b>Ge</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">33<br />
+<a href="/wiki/%E3%83%92%E7%B4%A0" title="ヒ素"><b>As</b></a></td>
+<td style="border:solid #999 2px">34<br />
+<a href="/wiki/%E3%82%BB%E3%83%AC%E3%83%B3" title="セレン"><b>Se</b></a></td>
+<td style="border:solid #09f 2px; color:#f33">35<br />
+<a href="/wiki/%E8%87%AD%E7%B4%A0" title="臭素"><b>Br</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3">36<br />
+<a href="/wiki/%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88%E3%83%B3" title="クリプトン"><b>Kr</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px; background:#f0f0ff">37<br />
+<a href="/wiki/%E3%83%AB%E3%83%93%E3%82%B8%E3%82%A6%E3%83%A0" title="ルビジウム"><b>Rb</b></a></td>
+<td style="border:solid #9f0 2px; background:#f0f0ff">38<br />
+<a href="/wiki/%E3%82%B9%E3%83%88%E3%83%AD%E3%83%B3%E3%83%81%E3%82%A6%E3%83%A0" title="ストロンチウム"><b>Sr</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">39<br />
+<a href="/wiki/%E3%82%A4%E3%83%83%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0" title="イットリウム"><b>Y</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">40<br />
+<a href="/wiki/%E3%82%B8%E3%83%AB%E3%82%B3%E3%83%8B%E3%82%A6%E3%83%A0" title="ジルコニウム"><b>Zr</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">41<br />
+<a href="/wiki/%E3%83%8B%E3%82%AA%E3%83%96" title="ニオブ"><b>Nb</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">42<br />
+<a href="/wiki/%E3%83%A2%E3%83%AA%E3%83%96%E3%83%87%E3%83%B3" title="モリブデン"><b>Mo</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">43<br />
+<a href="/wiki/%E3%83%86%E3%82%AF%E3%83%8D%E3%83%81%E3%82%A6%E3%83%A0" title="テクネチウム"><b>Tc</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">44<br />
+<a href="/wiki/%E3%83%AB%E3%83%86%E3%83%8B%E3%82%A6%E3%83%A0" title="ルテニウム"><b>Ru</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">45<br />
+<a href="/wiki/%E3%83%AD%E3%82%B8%E3%82%A6%E3%83%A0" title="ロジウム"><b>Rh</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">46<br />
+<a href="/wiki/%E3%83%91%E3%83%A9%E3%82%B8%E3%82%A6%E3%83%A0" title="パラジウム"><b>Pd</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">47<br />
+<a href="/wiki/%E9%8A%80" title="銀"><b>Ag</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">48<br />
+<a href="/wiki/%E3%82%AB%E3%83%89%E3%83%9F%E3%82%A6%E3%83%A0" title="カドミウム"><b>Cd</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">49<br />
+<a href="/wiki/%E3%82%A4%E3%83%B3%E3%82%B8%E3%82%A6%E3%83%A0" title="インジウム"><b>In</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">50<br />
+<a href="/wiki/%E3%82%B9%E3%82%BA" title="スズ"><b>Sn</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">51<br />
+<a href="/wiki/%E3%82%A2%E3%83%B3%E3%83%81%E3%83%A2%E3%83%B3" title="アンチモン"><b>Sb</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">52<br />
+<a href="/wiki/%E3%83%86%E3%83%AB%E3%83%AB" title="テルル"><b>Te</b></a></td>
+<td style="border:solid #09f 2px">53<br />
+<a href="/wiki/%E3%83%A8%E3%82%A6%E7%B4%A0" title="ヨウ素"><b>I</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3">54<br />
+<a href="/wiki/%E3%82%AD%E3%82%BB%E3%83%8E%E3%83%B3" title="キセノン"><b>Xe</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px; background:#f0f0ff">55<br />
+<a href="/wiki/%E3%82%BB%E3%82%B7%E3%82%A6%E3%83%A0" title="セシウム"><b>Cs</b></a></td>
+<td style="border:solid #9f0 2px; background:#f0f0ff">56<br />
+<a href="/wiki/%E3%83%90%E3%83%AA%E3%82%A6%E3%83%A0" title="バリウム"><b>Ba</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff; color:red; font-size:smaller">*1</td>
+<td style="border:solid #00f 2px; background:#f0f0ff">72<br />
+<a href="/wiki/%E3%83%8F%E3%83%95%E3%83%8B%E3%82%A6%E3%83%A0" title="ハフニウム"><b>Hf</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">73<br />
+<a href="/wiki/%E3%82%BF%E3%83%B3%E3%82%BF%E3%83%AB" title="タンタル"><b>Ta</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">74<br />
+<a href="/wiki/%E3%82%BF%E3%83%B3%E3%82%B0%E3%82%B9%E3%83%86%E3%83%B3" title="タングステン"><b>W</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">75<br />
+<a href="/wiki/%E3%83%AC%E3%83%8B%E3%82%A6%E3%83%A0" title="レニウム"><b>Re</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">76<br />
+<a href="/wiki/%E3%82%AA%E3%82%B9%E3%83%9F%E3%82%A6%E3%83%A0" title="オスミウム"><b>Os</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">77<br />
+<a href="/wiki/%E3%82%A4%E3%83%AA%E3%82%B8%E3%82%A6%E3%83%A0" title="イリジウム"><b>Ir</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">78<br />
+<a href="/wiki/%E7%99%BD%E9%87%91" title="白金"><b>Pt</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">79<br />
+<a href="/wiki/%E9%87%91" title="金"><b>Au</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff; color:#f33">80<br />
+<a href="/wiki/%E6%B0%B4%E9%8A%80" title="水銀"><b>Hg</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">81<br />
+<a href="/wiki/%E3%82%BF%E3%83%AA%E3%82%A6%E3%83%A0" title="タリウム"><b>Tl</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">82<br />
+<a href="/wiki/%E9%89%9B" title="鉛"><b>Pb</b></a></td>
+<td style="border:solid #999 2px; background:#f0f0ff">83<br />
+<a href="/wiki/%E3%83%93%E3%82%B9%E3%83%9E%E3%82%B9" title="ビスマス"><b>Bi</b></a></td>
+<td style="border:solid #999 2px; background:#ccffff">84<br />
+<a href="/wiki/%E3%83%9D%E3%83%AD%E3%83%8B%E3%82%A6%E3%83%A0" title="ポロニウム"><b>Po</b></a></td>
+<td style="border:solid #09f 2px">85<br />
+<a href="/wiki/%E3%82%A2%E3%82%B9%E3%82%BF%E3%83%81%E3%83%B3" title="アスタチン"><b>At</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3">86<br />
+<a href="/wiki/%E3%83%A9%E3%83%89%E3%83%B3" title="ラドン"><b>Rn</b></a></td>
+</tr>
+<tr>
+<td style="border:solid #f90 2px; background:#f0f0ff">87<br />
+<a href="/wiki/%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%A6%E3%83%A0" title="フランシウム"><b>Fr</b></a></td>
+<td style="border:solid #9f0 2px; background:#f0f0ff">88<br />
+<a href="/wiki/%E3%83%A9%E3%82%B8%E3%82%A6%E3%83%A0" title="ラジウム"><b>Ra</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff; color:red; font-size:smaller">*2</td>
+<td style="border:solid #999 2px; background:#ffffcc">104<br />
+<a href="/wiki/%E3%83%A9%E3%82%B6%E3%83%9B%E3%83%BC%E3%82%B8%E3%82%A6%E3%83%A0" title="ラザホージウム"><b>Rf</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">105<br />
+<a href="/wiki/%E3%83%89%E3%83%96%E3%83%8B%E3%82%A6%E3%83%A0" title="ドブニウム"><b>Db</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">106<br />
+<a href="/wiki/%E3%82%B7%E3%83%BC%E3%83%9C%E3%83%BC%E3%82%AE%E3%82%A6%E3%83%A0" title="シーボーギウム"><b>Sg</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">107<br />
+<a href="/wiki/%E3%83%9C%E3%83%BC%E3%83%AA%E3%82%A6%E3%83%A0" title="ボーリウム"><b>Bh</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">108<br />
+<a href="/wiki/%E3%83%8F%E3%83%83%E3%82%B7%E3%82%A6%E3%83%A0" title="ハッシウム"><b>Hs</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">109<br />
+<a href="/wiki/%E3%83%9E%E3%82%A4%E3%83%88%E3%83%8D%E3%83%AA%E3%82%A6%E3%83%A0" title="マイトネリウム"><b>Mt</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">110<br />
+<a href="/wiki/%E3%83%80%E3%83%BC%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%81%E3%82%A6%E3%83%A0" title="ダームスタチウム"><b>Ds</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">111<br />
+<a href="/wiki/%E3%83%AC%E3%83%B3%E3%83%88%E3%82%B2%E3%83%8B%E3%82%A6%E3%83%A0" title="レントゲニウム"><b>Rg</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">112<br />
+<a href="/wiki/%E3%82%B3%E3%83%9A%E3%83%AB%E3%83%8B%E3%82%B7%E3%82%A6%E3%83%A0" title="コペルニシウム"><b>Cn</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">113<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0" title="ウンウントリウム"><b>Uut</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">114<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%82%AF%E3%82%A2%E3%82%B8%E3%82%A6%E3%83%A0" title="ウンウンクアジウム"><b>Uuq</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">115<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%83%9A%E3%83%B3%E3%83%81%E3%82%A6%E3%83%A0" title="ウンウンペンチウム"><b>Uup</b></a></td>
+<td style="border:solid #999 2px; background:#ffffcc">116<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%83%98%E3%82%AD%E3%82%B7%E3%82%A6%E3%83%A0" title="ウンウンヘキシウム"><b>Uuh</b></a></td>
+<td style="border:solid #09f 2px; background:#ffffcc">117<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%82%BB%E3%83%97%E3%83%81%E3%82%A6%E3%83%A0" title="ウンウンセプチウム"><b>Uus</b></a></td>
+<td style="border:solid #0f9 2px; color:#3f3; background:#ffffcc">118<br />
+<a href="/wiki/%E3%82%A6%E3%83%B3%E3%82%A6%E3%83%B3%E3%82%AA%E3%82%AF%E3%83%81%E3%82%A6%E3%83%A0" title="ウンウンオクチウム"><b>Uuo</b></a></td>
+</tr>
+<tr>
+<td colspan="18">&#160;</td>
+</tr>
+<tr>
+<td colspan="3" style="text-align:right; font-size:smaller"><span style="color:red">*1</span> <a href="/wiki/%E3%83%A9%E3%83%B3%E3%82%BF%E3%83%8E%E3%82%A4%E3%83%89" title="ランタノイド">ランタノイド</a>：</td>
+<td style="border:solid #00f 2px; background:#f0f0ff">57<br />
+<a href="/wiki/%E3%83%A9%E3%83%B3%E3%82%BF%E3%83%B3" title="ランタン"><b>La</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">58<br />
+<a href="/wiki/%E3%82%BB%E3%83%AA%E3%82%A6%E3%83%A0" title="セリウム"><b>Ce</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">59<br />
+<a href="/wiki/%E3%83%97%E3%83%A9%E3%82%BB%E3%82%AA%E3%82%B8%E3%83%A0" title="プラセオジム"><b>Pr</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">60<br />
+<a href="/wiki/%E3%83%8D%E3%82%AA%E3%82%B8%E3%83%A0" title="ネオジム"><b>Nd</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">61<br />
+<a href="/wiki/%E3%83%97%E3%83%AD%E3%83%A1%E3%83%81%E3%82%A6%E3%83%A0" title="プロメチウム"><b>Pm</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">62<br />
+<a href="/wiki/%E3%82%B5%E3%83%9E%E3%83%AA%E3%82%A6%E3%83%A0" title="サマリウム"><b>Sm</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">63<br />
+<a href="/wiki/%E3%83%A6%E3%82%A6%E3%83%AD%E3%83%94%E3%82%A6%E3%83%A0" title="ユウロピウム"><b>Eu</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">64<br />
+<a href="/wiki/%E3%82%AC%E3%83%89%E3%83%AA%E3%83%8B%E3%82%A6%E3%83%A0" title="ガドリニウム"><b>Gd</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">65<br />
+<a href="/wiki/%E3%83%86%E3%83%AB%E3%83%93%E3%82%A6%E3%83%A0" title="テルビウム"><b>Tb</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">66<br />
+<a href="/wiki/%E3%82%B8%E3%82%B9%E3%83%97%E3%83%AD%E3%82%B7%E3%82%A6%E3%83%A0" title="ジスプロシウム"><b>Dy</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">67<br />
+<a href="/wiki/%E3%83%9B%E3%83%AB%E3%83%9F%E3%82%A6%E3%83%A0" title="ホルミウム"><b>Ho</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">68<br />
+<a href="/wiki/%E3%82%A8%E3%83%AB%E3%83%93%E3%82%A6%E3%83%A0" title="エルビウム"><b>Er</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">69<br />
+<a href="/wiki/%E3%83%84%E3%83%AA%E3%82%A6%E3%83%A0" title="ツリウム"><b>Tm</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">70<br />
+<a href="/wiki/%E3%82%A4%E3%83%83%E3%83%86%E3%83%AB%E3%83%93%E3%82%A6%E3%83%A0" title="イッテルビウム"><b>Yb</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">71<br />
+<a href="/wiki/%E3%83%AB%E3%83%86%E3%83%81%E3%82%A6%E3%83%A0" title="ルテチウム"><b>Lu</b></a></td>
+</tr>
+<tr>
+<td colspan="3" style="text-align:right; font-size:smaller"><span style="color:red">*2</span> <a href="/wiki/%E3%82%A2%E3%82%AF%E3%83%81%E3%83%8E%E3%82%A4%E3%83%89" title="アクチノイド">アクチノイド</a>：</td>
+<td style="border:solid #00f 2px; background:#f0f0ff">89<br />
+<a href="/wiki/%E3%82%A2%E3%82%AF%E3%83%81%E3%83%8B%E3%82%A6%E3%83%A0" title="アクチニウム"><b>Ac</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">90<br />
+<a href="/wiki/%E3%83%88%E3%83%AA%E3%82%A6%E3%83%A0" title="トリウム"><b>Th</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">91<br />
+<a href="/wiki/%E3%83%97%E3%83%AD%E3%83%88%E3%82%A2%E3%82%AF%E3%83%81%E3%83%8B%E3%82%A6%E3%83%A0" title="プロトアクチニウム"><b>Pa</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">92<br />
+<a href="/wiki/%E3%82%A6%E3%83%A9%E3%83%B3" title="ウラン"><b>U</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">93<br />
+<a href="/wiki/%E3%83%8D%E3%83%97%E3%83%84%E3%83%8B%E3%82%A6%E3%83%A0" title="ネプツニウム"><b>Np</b></a></td>
+<td style="border:solid #00f 2px; background:#f0f0ff">94<br />
+<a href="/wiki/%E3%83%97%E3%83%AB%E3%83%88%E3%83%8B%E3%82%A6%E3%83%A0" title="プルトニウム"><b>Pu</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">95<br />
+<a href="/wiki/%E3%82%A2%E3%83%A1%E3%83%AA%E3%82%B7%E3%82%A6%E3%83%A0" title="アメリシウム"><b>Am</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">96<br />
+<a href="/wiki/%E3%82%AD%E3%83%A5%E3%83%AA%E3%82%A6%E3%83%A0" title="キュリウム"><b>Cm</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">97<br />
+<a href="/wiki/%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AA%E3%82%A6%E3%83%A0" title="バークリウム"><b>Bk</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">98<br />
+<a href="/wiki/%E3%82%AB%E3%83%AA%E3%83%9B%E3%83%AB%E3%83%8B%E3%82%A6%E3%83%A0" title="カリホルニウム"><b>Cf</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">99<br />
+<a href="/wiki/%E3%82%A2%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%82%A4%E3%83%8B%E3%82%A6%E3%83%A0" title="アインスタイニウム"><b>Es</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">100<br />
+<a href="/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9F%E3%82%A6%E3%83%A0" title="フェルミウム"><b>Fm</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">101<br />
+<a href="/wiki/%E3%83%A1%E3%83%B3%E3%83%87%E3%83%AC%E3%83%93%E3%82%A6%E3%83%A0" title="メンデレビウム"><b>Md</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">102<br />
+<a href="/wiki/%E3%83%8E%E3%83%BC%E3%83%99%E3%83%AA%E3%82%A6%E3%83%A0" title="ノーベリウム"><b>No</b></a></td>
+<td style="border:solid #00f 2px; background:#ffffcc">103<br />
+<a href="/wiki/%E3%83%AD%E3%83%BC%E3%83%AC%E3%83%B3%E3%82%B7%E3%82%A6%E3%83%A0" title="ローレンシウム"><b>Lr</b></a></td>
+</tr>
+<tr>
+<td colspan="18">&#160;
+<table style="margin:0 auto; margin-top:1em; text-align:left; border-spacing:4px 8px">
+<tr>
+<td style="border:solid #999 1px; width:1.2em; text-align:center">1</td>
+<td style="width:7em">常温で<a href="/wiki/%E5%9B%BA%E4%BD%93" title="固体">固体</a></td>
+<td style="border:solid #999 1px; background:#f0f0ff; width:1.2em">&#160;</td>
+<td style="width:7em"><a href="/wiki/%E9%87%91%E5%B1%9E%E5%85%83%E7%B4%A0" title="金属元素">金属元素</a></td>
+<td style="border:solid #f90 2px; width:1.2em">&#160;</td>
+<td><a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E9%87%91%E5%B1%9E" title="アルカリ金属" class="mw-redirect">アルカリ金属</a></td>
+</tr>
+<tr>
+<td style="border:solid #999 1px;color:#f33; text-align:center">1</td>
+<td>常温で<a href="/wiki/%E6%B6%B2%E4%BD%93" title="液体">液体</a></td>
+<td style="border:solid #999 1px;background:#ccffff">&#160;</td>
+<td><a href="/wiki/%E5%8D%8A%E9%87%91%E5%B1%9E%E5%85%83%E7%B4%A0" title="半金属元素" class="mw-redirect">半金属元素</a></td>
+<td style="border:solid #9f0 2px">&#160;</td>
+<td><a href="/wiki/%E3%82%A2%E3%83%AB%E3%82%AB%E3%83%AA%E5%9C%9F%E9%A1%9E%E9%87%91%E5%B1%9E" title="アルカリ土類金属" class="mw-redirect">アルカリ土類金属</a></td>
+</tr>
+<tr>
+<td style="border:solid #999 1px;color:#3f3; text-align:center">1</td>
+<td>常温で<a href="/wiki/%E6%B0%97%E4%BD%93" title="気体">気体</a></td>
+<td style="border:solid #999 1px">&#160;</td>
+<td><a href="/wiki/%E9%9D%9E%E9%87%91%E5%B1%9E%E5%85%83%E7%B4%A0" title="非金属元素">非金属元素</a></td>
+<td style="border:solid #09f 2px">&#160;</td>
+<td><a href="/wiki/%E3%83%8F%E3%83%AD%E3%82%B2%E3%83%B3" title="ハロゲン" class="mw-redirect">ハロゲン</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td style="border:solid #999 1px;background:#ffffcc">&#160;</td>
+<td><a href="/wiki/%E4%BA%BA%E5%B7%A5%E5%85%83%E7%B4%A0" title="人工元素" class="mw-redirect">人工元素</a></td>
+<td style="border:solid #0f9 2px">&#160;</td>
+<td><a href="/wiki/%E5%B8%8C%E3%82%AC%E3%82%B9" title="希ガス" class="mw-redirect">希ガス</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td style="border:solid #00f 2px">&#160;</td>
+<td><a href="/wiki/%E9%81%B7%E7%A7%BB%E5%85%83%E7%B4%A0" title="遷移元素">遷移元素</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
