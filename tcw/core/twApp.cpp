@@ -12,12 +12,9 @@
 #include <tcw/twSDLDC.h>
 #include <tcw/twWnd.h>
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
 #endif
-
-
-using namespace std;
 
 twApp *tw_app=NULL;
 
@@ -40,7 +37,7 @@ twApp::~twApp(){
 	
 }
 
-void twApp::setTitle(const wstring &title){
+void twApp::setTitle(const std::wstring &title){
 	char buf[256];
 	twW2M(buf, title.c_str());
 	SDL_WM_SetCaption(buf, buf);

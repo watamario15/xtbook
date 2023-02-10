@@ -69,9 +69,9 @@ XTBStream *XTBFileStream::streamForReadingAtPath(const XTBSysString &path, bool 
 	int f=open(path.c_str(), O_RDONLY);
 #elif EV_PLATFORM_WIN32
 #if XTB_USE_WIN32IO
-	int f = (int)CreateFile(path.c_str(), GENERIC_READ, FILE_SHARE_READ,
+	LONG_PTR f = (LONG_PTR)CreateFile(path.c_str(), GENERIC_READ, FILE_SHARE_READ,
 						  NULL, OPEN_EXISTING, 0, NULL);
-	if(f == (int)INVALID_HANDLE_VALUE)f = -1;
+	if(f == (LONG_PTR)INVALID_HANDLE_VALUE)f = -1;
 #else
 	int f=_wopen(path.c_str(), O_RDONLY);
 #endif
@@ -97,9 +97,9 @@ XTBFileStream *XTBFileStream::streamForReadingAtPath(const XTBSysString &path){
 	int f=open(path.c_str(), O_RDONLY);
 #elif EV_PLATFORM_WIN32
 #if XTB_USE_WIN32IO
-	int f = (int)CreateFile(path.c_str(), GENERIC_READ, FILE_SHARE_READ,
+	LONG_PTR f = (LONG_PTR)CreateFile(path.c_str(), GENERIC_READ, FILE_SHARE_READ,
 							NULL, OPEN_EXISTING, 0, NULL);
-	if(f == (int)INVALID_HANDLE_VALUE)f = -1;
+	if(f == (LONG_PTR)INVALID_HANDLE_VALUE)f = -1;
 #else
 	int f=_wopen(path.c_str(), O_RDONLY);
 #endif
@@ -116,11 +116,11 @@ XTBFileStream *XTBFileStream::streamForWritingAtPath(const XTBSysString &path){
 	int f=open(path.c_str(), O_WRONLY|O_CREAT|O_TRUNC);
 #elif EV_PLATFORM_WIN32
 #if XTB_USE_WIN32IO
-	int f = (int)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
+	LONG_PTR f = (LONG_PTR)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
 							NULL, TRUNCATE_EXISTING, 0, NULL);
-	if(f == (int)INVALID_HANDLE_VALUE)f = -1;
+	if(f == (LONG_PTR)INVALID_HANDLE_VALUE)f = -1;
 	if(f == -1){
-		f = (int)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
+		f = (LONG_PTR)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
 							NULL, CREATE_ALWAYS, 0, NULL);
 	}
 #else
@@ -139,9 +139,9 @@ XTBFileStream *XTBFileStream::streamForUpdatingAtPath(const XTBSysString &path){
 	int f=open(path.c_str(), O_RDWR|O_CREAT);
 #elif EV_PLATFORM_WIN32
 #if XTB_USE_WIN32IO
-	int f = (int)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
+	LONG_PTR f = (LONG_PTR)CreateFile(path.c_str(), GENERIC_READ|GENERIC_WRITE, FILE_SHARE_READ,
 							NULL, OPEN_ALWAYS, 0, NULL);
-	if(f == (int)INVALID_HANDLE_VALUE)f = -1;
+	if(f == (LONG_PTR)INVALID_HANDLE_VALUE)f = -1;
 #else
 	int f=_wopen(path.c_str(), O_RDWR|O_CREAT);
 #endif

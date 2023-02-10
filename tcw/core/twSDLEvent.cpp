@@ -19,11 +19,9 @@
 #include <tcw/twLock.h>
 #include <exception>
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <windows.h>
 #endif
-
-using namespace std;
 
 #define twSE_VALIDATE		(SDL_USEREVENT+0x0001)
 #define twSE_QUIT			(SDL_USEREVENT+0x0002)
@@ -40,7 +38,7 @@ twSDLEvent::~twSDLEvent(){
 	delete removedTimersSemaphore;
 }
 
-wstring twSDLEvent::convertKey(const SDL_keysym& s) const{
+std::wstring twSDLEvent::convertKey(const SDL_keysym& s) const{
 	SDLKey sym=s.sym;
 	switch(sym){
 		case SDLK_BACKSPACE:
@@ -473,7 +471,7 @@ void twSDLEvent::addTimer(twTimer *timer){
 }
 
 void twSDLEvent::removeTimer(twTimer *timer){
-	for(list<timerInfo>::iterator it=timers.begin();it!=timers.end();it++){
+	for(std::list<timerInfo>::iterator it=timers.begin();it!=timers.end();it++){
 		timerInfo& info=*it;
 		if(info.timer==timer){
 			{

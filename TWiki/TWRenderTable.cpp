@@ -825,6 +825,9 @@ int TWRenderTable::levelForBorderStyle(TWHTMLStyleBorderStyle style){
 		case TWHTMLStyleBorderStyleNone:
 			return -1;
 	}
+
+	// Not reached.
+	return 0;
 }
 
 /** determines which border takes precedence.

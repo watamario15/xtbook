@@ -10,8 +10,6 @@
 #include <tcw/twButton.h>
 #include <tcw/twBaseSkin.h>
 
-using namespace std;
-
 twButton::twButton(){
 	m_keyPress=false;
 	m_press=false;
@@ -20,7 +18,7 @@ twButton::twButton(){
 twButton::~twButton(){
 	
 }
-void twButton::clientKeyDown(const wstring& str){
+void twButton::clientKeyDown(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=true; 
 		invalidate();
@@ -28,7 +26,7 @@ void twButton::clientKeyDown(const wstring& str){
 		sendCmdToParent();
 	}
 }
-void twButton::clientKeyUp(const wstring& str){
+void twButton::clientKeyUp(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=false; 
 		invalidate();

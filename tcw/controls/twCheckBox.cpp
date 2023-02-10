@@ -10,8 +10,6 @@
 #include <tcw/twCheckBox.h>
 #include <tcw/twBaseSkin.h>
 
-using namespace std;
-
 twCheckBox::twCheckBox(){
 	m_keyPress=false;
 	m_press=false;
@@ -26,13 +24,13 @@ void twCheckBox::runCmd(){
 	invalidate();
 	sendCmdToParent();
 }
-void twCheckBox::clientKeyDown(const wstring& str){
+void twCheckBox::clientKeyDown(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=true; 
 		invalidate();
 	}
 }
-void twCheckBox::clientKeyUp(const wstring& str){
+void twCheckBox::clientKeyUp(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=false; 
 		invalidate();

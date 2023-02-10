@@ -12,9 +12,6 @@
 #include <cstring>
 #include <tcw/twVGAFont.h>
 
-
-using namespace std;
-
 static char fontdata[] = {
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -2098,7 +2095,7 @@ twVGAFont::~twVGAFont(){
 	delete fnt;
 }
 
-void twVGAFont::render(twDC *dc, twColor col, const twPoint& pos, const wstring& str) const{
+void twVGAFont::render(twDC *dc, twColor col, const twPoint& pos, const std::wstring& str) const{
 	twPoint pt=pos;
 	int n;
 	wchar_t br=0;

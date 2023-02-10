@@ -10,7 +10,7 @@
 #pragma once
 
 #include <tcw/twDC.h>
-#include <SDL/SDL.h>
+#include <SDL.h>
 #include <wchar.h>
 #include <string>
 #include <tcw/twTimer.h>

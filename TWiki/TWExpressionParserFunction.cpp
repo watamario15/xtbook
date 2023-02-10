@@ -32,7 +32,7 @@ std::wstring TWExpressionParserFunction::execute(const std::wstring& arg0, TWPre
 		return TWUtils::evaluateExpression(arg0);
 	}catch(const std::wstring& str){
 		//XTBDumpWString(arg0);
-		std:wstring outs;
+		std::wstring outs;
 		outs=L"<strong class=\"error\">"+TWUtils::escapeHTMLSpecialChars(str)+L"</strong>";
 		return outs;
 	}

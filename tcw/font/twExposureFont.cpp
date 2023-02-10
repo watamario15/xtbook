@@ -14,8 +14,6 @@
 #include <tcw/twStrConv.h>
 #include <tcw/twException.h>
 
-using namespace std;
-
 void twExposureFont::setColor(Uint32 col) const{
 	col&=0xffffff;
 	if(col==ocolor)
@@ -49,7 +47,7 @@ twExposureFont::twExposureFont(const std::wstring& name){
 	int ch;
 	twRect rt;
 	memset(glyphs, 0, sizeof(glyphs));
-	sprintf(fn, "%s.cfg", buf);
+	snprintf(fn, sizeof(fn) / sizeof(fn[0]) - 4, "%s.cfg", buf);
 	f=fopen(fn, "r");
 	if(f==NULL){
 		delete fnt;
@@ -68,7 +66,7 @@ twExposureFont::~twExposureFont(){
 	delete fnt;
 }
 
-void twExposureFont::render(twDC *dc, twColor col, const twPoint& pos, const wstring& str) const{
+void twExposureFont::render(twDC *dc, twColor col, const twPoint& pos, const std::wstring& str) const{
 	twPoint pt=pos;
 	int n;
 	wchar_t br=0;

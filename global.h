@@ -23,13 +23,11 @@
 #include <stdint.h>
 #include <exception>
 
-
-using namespace std;
 #include "SDL.h"
 
-#if defined(__MACOSX__)
+#if defined(__APPLE__)
 #define EV_PLATFORM_MACOSX			1
-#elif defined(WIN32)
+#elif defined(_WIN32)
 #define EV_PLATFORM_WIN32			1
 #else
 #define EV_PLATFORM_GENERICPOSIX	1

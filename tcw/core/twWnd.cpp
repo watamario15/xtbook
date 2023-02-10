@@ -20,8 +20,6 @@
 //#define DEBUG_VALIDATE_TIME
 
 
-using namespace std;
-
 static int tw_maxWnds=1024;
 static twWnd ** tw_wnds;
 static bool tw_dirty;
@@ -102,7 +100,7 @@ void twWnd::setParent(twWnd *newParent){
 		return;
 	if(m_parent){
 		if(getStatus().focused && m_parent->m_children.size()>=2){
-			list<twWnd *>::iterator it=m_parent->m_children.begin();
+			std::list<twWnd *>::iterator it=m_parent->m_children.begin();
 			it++;
 			(*it)->focus();
 		}
@@ -139,7 +137,7 @@ void twWnd::setTitle(const std::wstring& title){
 	m_title=title;
 	invalidate();
 }
-const wstring& twWnd::getTitle() const{
+const std::wstring& twWnd::getTitle() const{
 	return m_title;
 }
 
@@ -207,7 +205,7 @@ const twFont *twWnd::getFont() const{
 void twWnd::enumChildren(void (*func)(twWnd *)) const{
 	if(!func)
 		return;
-	for(list<twWnd *>::const_iterator it=m_children.begin();it!=m_children.end();it++)
+	for(std::list<twWnd *>::const_iterator it=m_children.begin();it!=m_children.end();it++)
 		(*func)(*it);
 }
 
@@ -357,7 +355,7 @@ void twWnd::paint(const twRect& rt){
 		
 		delete cdc;
 		
-		for(list<twWnd *>::reverse_iterator it=m_children.rbegin();it!=
+		for(std::list<twWnd *>::reverse_iterator it=m_children.rbegin();it!=
 			m_children.rend();it++){
 			twWnd *w=*it;
 			if(!w->getStyle().visible)
@@ -402,7 +400,7 @@ twWnd *twWnd::hitTest(const twPoint& pt){
 	if(!(rt&&pt))
 		return NULL;
 	if(getClientRect()&&pt){
-		for(list<twWnd *>::iterator it=m_children.begin();it!=
+		for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 			m_children.end();it++){
 			twWnd *w=*it;
 			if(w->getRect() && pt-getClientRect().loc()){
@@ -434,7 +432,7 @@ const twWnd *twWnd::hitTest(const twPoint& pt) const{
 	if(!(rt&&pt))
 		return NULL;
 	if(getClientRect()&&pt){
-		for(list<twWnd *>::const_iterator it=m_children.begin();it!=
+		for(std::list<twWnd *>::const_iterator it=m_children.begin();it!=
 			m_children.end();it++){
 			twWnd *w=*it;
 			if(w->getRect() && pt-getClientRect().loc()){
@@ -521,7 +519,7 @@ void twWnd::clientKeyEventHandled(){
 	m_keyEventHandled=true;
 }
 
-void twWnd::onKeyDown(const wstring& str){
+void twWnd::onKeyDown(const std::wstring& str){
 	bool useDef=true;
 	
 	m_keyEventHandled=false;
@@ -551,7 +549,7 @@ void twWnd::onKeyPress(wchar_t ch){
 		(*m_children.begin())->onKeyPress(ch);
 	}	
 }
-void twWnd::onKeyUp(const wstring& str){
+void twWnd::onKeyUp(const std::wstring& str){
 	m_keyEventHandled=false;
 	clientKeyUp(str);
 	if(m_keyEventHandled)
@@ -565,7 +563,7 @@ void twWnd::onMouseDown(const twPoint& pt, twMouseButton button){
 	if(!getStatus().focused)
 		return;
 	if(((getClientRect()&&pt) && !tw_capture) || (tw_capture && tw_capClient)){
-		for(list<twWnd *>::iterator it=m_children.begin();it!=
+		for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 			m_children.end();it++){
 			twWnd *w=*it;
 			if(w->getRect() && pt-getClientRect().loc()){
@@ -621,7 +619,7 @@ void twWnd::onMouseMove(const twPoint& pt){
 		return;
 	if(((getClientRect()&&pt) && !tw_capture) || (tw_capture && tw_capClient)){
 		if(!tw_capture){
-			for(list<twWnd *>::iterator it=m_children.begin();it!=
+			for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 				m_children.end();it++){
 				twWnd *w=*it;
 				if(w->getRect() && pt-getClientRect().loc()){
@@ -646,27 +644,27 @@ void twWnd::onMouseMove(const twPoint& pt){
 		}
 		if(m_drag==twWD_up){
 			vl=m_rect.h-(pt.y-m_dragPos.y);
-			vl=max(vl, getMinSize().h);
+			vl=std::max(vl, getMinSize().h);
 			setRect(twRect(m_rect.x, m_rect.y+m_rect.h-vl,
 						   m_rect.w, vl));
 			sft.y-=(pt.y-m_dragPos.y);
 		}
 		if(m_drag==twWD_down){
 			vl=m_rect.h+(pt.y-m_dragPos.y);
-			vl=max(vl, getMinSize().h);
+			vl=std::max(vl, getMinSize().h);
 			setRect(twRect(m_rect.x, m_rect.y,
 						   m_rect.w, vl));
 		} 
 		if(m_drag==twWD_left){
 			vl=m_rect.w-(pt.x-m_dragPos.x);
-			vl=max(vl, getMinSize().w);
+			vl=std::max(vl, getMinSize().w);
 			setRect(twRect(m_rect.x+m_rect.w-vl, m_rect.y,
 						   vl, m_rect.h));
 			sft.x-=(pt.x-m_dragPos.x);
 		} 
 		if(m_drag==twWD_right){
 			vl=m_rect.w+(pt.x-m_dragPos.x);
-			vl=max(vl, getMinSize().w);
+			vl=std::max(vl, getMinSize().w);
 			setRect(twRect(m_rect.x, m_rect.y,
 						   vl, m_rect.h));
 		}
@@ -683,7 +681,7 @@ void twWnd::onMouseUp(const twPoint& pt, twMouseButton button){
 		return;
 	if(((getClientRect()&&pt) && !tw_capture) || (tw_capture && tw_capClient)){
 		clientMouseUp(pt-getClientRect().loc(), button);
-		for(list<twWnd *>::iterator it=m_children.begin();it!=
+		for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 			m_children.end();it++){
 			twWnd *w=*it;
 			if(w->getRect() && pt-getClientRect().loc()){
@@ -713,11 +711,11 @@ twSize twWnd::getMinSize() const{
 	return m_rect.size()-getClientRect().size();
 }
 
-void twWnd::clientKeyDown(const wstring& str){
+void twWnd::clientKeyDown(const std::wstring& str){
 }
 void twWnd::clientKeyPress(wchar_t ch){
 }
-void twWnd::clientKeyUp(const wstring& str){
+void twWnd::clientKeyUp(const std::wstring& str){
 }
 void twWnd::clientMouseDown(const twPoint& pt, twMouseButton button){
 }
@@ -744,7 +742,7 @@ void twWnd::command(int){
 }
 
 void twWnd::willAppear(){
-	for(list<twWnd *>::iterator it=m_children.begin();it!=
+	for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 		m_children.end();it++){
 		twWnd *w=*it;
 		if(w->getStyle().visible){
@@ -753,7 +751,7 @@ void twWnd::willAppear(){
 	}
 }
 void twWnd::didDisappear(){
-	for(list<twWnd *>::iterator it=m_children.begin();it!=
+	for(std::list<twWnd *>::iterator it=m_children.begin();it!=
 		m_children.end();it++){
 		twWnd *w=*it;
 		if(w->getStyle().visible){

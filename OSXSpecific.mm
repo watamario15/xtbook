@@ -7,7 +7,6 @@
  */
 
 #import "OSXSpecific.h"
-using namespace std;
 
 void showErrorAlert(const char *str){
 	NSAlert *alert=[NSAlert alertWithMessageText:@"Error while initializing XTBook."
@@ -43,7 +42,7 @@ std::vector<std::string> pathsInBundleResourceDirectory(const char *dirName, con
 	NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
 	paths=[[NSBundle mainBundle] pathsForResourcesOfType:[NSString stringWithUTF8String:fileType] 
 											 inDirectory:[NSString stringWithUTF8String:dirName]];
-	vector<string>  ret;
+	vector<std::string>  ret;
 	for(NSString *path in paths){
 		std::string str;
 		str=[path UTF8String];
@@ -59,7 +58,7 @@ std::string appDirOSX(){
 	NSString *str;
 	str=[[NSBundle mainBundle] resourcePath];
 	
-	string ret=[str UTF8String];
+	std::string ret=[str UTF8String];
 	
 	[pool drain];
 	

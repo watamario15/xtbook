@@ -1,0 +1,222 @@
+name: Build
+
+on:
+  push:
+    tags: '*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        type: string
+        required: true
+        description: 'Tag Name to be created'
+
+permissions:
+  contents: write
+
+env:
+  GH_TOKEN: ${{ github.token }}
+  GH_REPO: ${{ github.repository }}
+  VERSION: ${{ inputs.tag || github.ref_name }}
+
+jobs:
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create release
+        run: |
+          if ! gh release view "$VERSION" >/dev/null 2>&1; then
+            gh release create "$VERSION" --target "$GITHUB_SHA" -d -t "$VERSION" -n '## Linux (AMD64, ARM64)
+          Supports glibc 2.34 and later.
+
+          ## macOS (Intel/Arm Universal)
+
+          Supports macOS 10.13 High Sierra and later. Ad-hoc signed.
+
+          ## Windows (x86, x86_64, ARM32, ARM64)
+
+          x86 (i686) and x86_64 are built with MinGW-w64 and support Windows XP and later. ARM32 (armv7) and ARM64 (aarch64) are built with llvm-mingw UCRT and support Windows 8 and later.
+
+          ## Sharp Brain (Windows CE)
+
+          Supports Windows CE 5.0 and later with either ARMv4T or ARMv5TE CPU.'
+          fi
+
+  linux:
+    name: Linux
+    needs: create_release
+    runs-on: ubuntu-22.04  # Maximize glibc compatibility
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          sudo dpkg --add-architecture arm64
+          sudo sed -i -E 's/^deb /deb [arch=amd64] /' /etc/apt/sources.list
+          sudo tee /etc/apt/sources.list.d/arm64.list >/dev/null <<'EOF'
+          deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports jammy main universe
+          deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports jammy-updates main universe
+          deb [arch=arm64] http://ports.ubuntu.com/ubuntu-ports jammy-security main universe
+          EOF
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends build-essential g++-aarch64-linux-gnu
+
+      - name: Build
+        run: |
+          set -euo pipefail
+          src="$RUNNER_TEMP/SDL"
+          git clone --depth 1 https://github.com/libsdl-org/SDL-1.2.git "$src"
+
+          for arch in amd64 arm64; do
+            sudo apt-get install -y --no-install-recommends "libx11-dev:$arch" "libxext-dev:$arch"
+
+            host=$(dpkg-architecture -a"$arch" -qDEB_HOST_GNU_TYPE)
+            prefix="$RUNNER_TEMP/sdl-$arch"
+            mkdir -p "$RUNNER_TEMP/sdl-build-$arch"
+            (
+              cd "$RUNNER_TEMP/sdl-build-$arch"
+              CFLAGS='-O3' "$src/configure" \
+                --host="$host" --prefix="$prefix" --disable-shared --enable-static --disable-audio --disable-joystick --disable-cdrom
+              grep -n SDL_VIDEO_DRIVER_X11 include/SDL_config.h
+              grep -Eq '^#define SDL_VIDEO_DRIVER_X11[[:space:]]+1' include/SDL_config.h
+              make -j"$(nproc)"
+              make install
+            )
+            make -C build.linux clean-objects
+            make -C build.linux -j"$(nproc)" HOST="$host-" TARGET="xtbook-$arch" SDL_CONFIG="$prefix/bin/sdl-config"
+          done
+          cd build.linux
+          7z a "XTBook-$VERSION-Linux.zip" "XTBook-$VERSION-Linux"
+
+      - name: Upload
+        run: gh release upload "$VERSION" "build.linux/XTBook-$VERSION-Linux.zip" --clobber
+
+  windows:
+    name: Windows
+    needs: create_release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends make mingw-w64
+          mkdir -p "$RUNNER_TEMP/llvm-mingw"
+          gh release download -R mstorsjo/llvm-mingw -p '*-ucrt-ubuntu-*-x86_64.tar.xz' -O "$RUNNER_TEMP/llvm-mingw.tar.xz"
+          tar -xJf "$RUNNER_TEMP/llvm-mingw.tar.xz" -C "$RUNNER_TEMP/llvm-mingw" --strip-components=1
+
+      - name: Build
+        run: |
+          src="$RUNNER_TEMP/SDL"
+          git clone --depth 1 https://github.com/libsdl-org/SDL-1.2.git "$src"
+          for arch in i686 x86_64 armv7 aarch64; do
+            (
+              case "$arch" in
+                armv7|aarch64) export PATH="$RUNNER_TEMP/llvm-mingw/bin:$PATH" ;;
+              esac
+              prefix="$RUNNER_TEMP/sdl-$arch"
+              mkdir -p "$RUNNER_TEMP/sdl-build-$arch"
+              (
+                cd "$RUNNER_TEMP/sdl-build-$arch"
+                CFLAGS='-O3' "$src/configure" \
+                  --host="$arch-w64-mingw32" --prefix="$prefix" --disable-shared --enable-static --disable-directx --disable-audio --disable-joystick --disable-cdrom
+                make -j"$(nproc)"
+                make install
+              )
+              make -C build.mingw32 clean-objects
+              make -C build.mingw32 -j"$(nproc)" HOST="$arch-w64-mingw32-" TARGET="XTBook-$arch.exe" SDL_CONFIG="$prefix/bin/sdl-config"
+            )
+          done
+          cd build.mingw32
+          7z a "XTBook-$VERSION-Windows.zip" "XTBook-$VERSION-Windows"
+
+      - name: Upload
+        run: gh release upload "$VERSION" "build.mingw32/XTBook-$VERSION-Windows.zip" --clobber
+
+  brain:
+    name: Sharp Brain (CeGCC Arm)
+    needs: create_release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Download prebuilt CeGCC
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends make
+          gh release download -R brain-hackers/cegcc-build -p 'cegcc-x86_64-*.zip' -O "$RUNNER_TEMP/cegcc.zip"
+          7z x "$RUNNER_TEMP/cegcc.zip" -o/opt
+          echo /opt/cegcc/bin >> "$GITHUB_PATH"
+
+      - name: Build
+        run: |
+          set -euo pipefail
+          src="$RUNNER_TEMP/SDL"
+          git clone --depth 1 https://github.com/libsdl-org/SDL-1.2.git "$src"
+
+          for arch in armv4t armv5te; do
+            flags="-march=$arch"
+            prefix="$RUNNER_TEMP/sdl-$arch"
+            mkdir -p "$RUNNER_TEMP/sdl-build-$arch"
+            (
+              cd "$RUNNER_TEMP/sdl-build-$arch"
+              CFLAGS="-O3 $flags" LDFLAGS="$flags" "$src/configure" \
+                --host=arm-mingw32ce --prefix="$prefix" --disable-shared --enable-static --disable-audio --disable-joystick --disable-cdrom
+              make -j"$(nproc)"
+              make install
+            )
+            make -C build.cegcc clean-objects
+            make -C build.cegcc -j"$(nproc)" ARCHFLAGS="$flags" TARGET="XTBook-$arch.exe" SDL_CONFIG="$prefix/bin/sdl-config"
+          done
+          cd build.cegcc
+          touch "XTBook-$VERSION-Brain/index.din"
+          printf '\001\000\000\000\377\377\377\377' > "XTBook-$VERSION-Brain/AppMain.cfg"
+          curl -sSfL https://github.com/brain-hackers/buildbrain/raw/refs/heads/master/image/exeopener.exe.gz | gzip -d > "XTBook-$VERSION-Brain/AppMain.exe"
+          mv "XTBook-$VERSION-Brain/XTBook-armv5te.exe" "XTBook-$VERSION-Brain/AppMain_.exe"
+          7z a "XTBook-$VERSION-Brain.zip" "XTBook-$VERSION-Brain"
+
+      - name: Upload
+        run: gh release upload "$VERSION" "build.cegcc/XTBook-$VERSION-Brain.zip" --clobber
+
+  macos:
+    name: macOS Universal (x86_64 + arm64)
+    needs: create_release
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Build
+        run: |
+          set -euo pipefail
+          src="$RUNNER_TEMP/SDL"
+          prefix="$RUNNER_TEMP/sdl"
+          git clone --depth 1 https://github.com/libsdl-org/SDL-1.2.git "$src"
+
+          # SDLMain's obsolete CPS path fails with current macOS SDKs.
+          sed -i.bak '/^[[:space:]]*#[[:space:]]*define[[:space:]]*SDL_USE_CPS[[:space:]]*1[[:space:]]*$/d' "$src/src/main/macosx/SDLMain.m"
+          flags="-arch x86_64 -arch arm64 -Xarch_x86_64 -mmacosx-version-min=10.13 -Xarch_arm64 -mmacosx-version-min=11.0"
+          mkdir -p "$RUNNER_TEMP/sdl-build"
+          (
+            cd "$RUNNER_TEMP/sdl-build"
+            CC=clang CXX=clang++ CFLAGS="-O3 $flags" CXXFLAGS="-O3 $flags" LDFLAGS="$flags" "$src/configure" \
+              --prefix="$prefix" --disable-shared --enable-static --disable-video-x11 --disable-video-carbon --enable-video-cocoa --disable-audio --disable-joystick --disable-cdrom
+            make -j"$(sysctl -n hw.ncpu)"
+            make install
+          )
+          cd build.osx
+          make -j"$(sysctl -n hw.ncpu)" ARCHFLAGS="$flags" SDL_CONFIG="$RUNNER_TEMP/sdl/bin/sdl-config"
+          7z a "XTBook-$VERSION-Mac.zip" "XTBook-$VERSION-Mac"
+
+      - name: Upload
+        run: gh release upload "$VERSION" "build.osx/XTBook-$VERSION-Mac.zip" --clobber

@@ -10,9 +10,7 @@
 #include <tcw/twException.h>
 #include <tcw/twStrConv.h>
 
-using namespace std;
-
-twException::twException(const wstring& ms) throw(){
+twException::twException(const std::wstring& ms) throw(){
 	wcscpy(msg, ms.c_str());
 	twW2M(amsg, msg);
 }

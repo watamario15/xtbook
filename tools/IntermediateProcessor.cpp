@@ -16,8 +16,6 @@
 #include "../XTBDicDBReader.h"
 #include "../TWiki/TWParser.h"
 
-using namespace std;
-
 
 
 int main(int argc, char **argv){

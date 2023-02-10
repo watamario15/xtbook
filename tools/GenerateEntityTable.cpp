@@ -14,12 +14,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-using namespace std;
+#include <iostream>
 
 
 /* remove any spaces from @param str. */
-string removeSpace(const string& str){
-	string s;
+std::string removeSpace(const std::string& str){
+	std::string s;
 	s.reserve(str.size());
 	
 	for(int n=0;n<str.size();n++){
@@ -43,13 +43,13 @@ string removeSpace(const string& str){
 	return s;
 }
 
-string replaceString(const string& str, const string& from, const string& to){
-	string::size_type pos=0;
-	string newStr;
+std::string replaceString(const std::string& str, const std::string& from, const std::string& to){
+	std::string::size_type pos=0;
+	std::string newStr;
 	while(pos<str.size()){
-		string::size_type nextPos;
+		std::string::size_type nextPos;
 		nextPos=str.find(from, pos);
-		if(nextPos==string::npos)
+		if(nextPos==std::string::npos)
 			break;
 		newStr+=str.substr(pos, nextPos-pos);
 		newStr+=to;
@@ -60,7 +60,7 @@ string replaceString(const string& str, const string& from, const string& to){
 }
 
 
-std::vector<string> splitString(const std::string& str, const std::string& delimiter){
+std::vector<std::string> splitString(const std::string& str, const std::string& delimiter){
 	std::vector<std::string> resultStrings;
 	std::string::size_type i=0;
 	std::string::size_type nextPos;
@@ -73,25 +73,24 @@ std::vector<string> splitString(const std::string& str, const std::string& delim
 }
 
 int main(int argc, char **argv){
-	char buf[4096];
 	if(argc==1){
-		while(gets(buf)){
-			std::string str=buf;
-			std::vector<string> strs=splitString(str, ",");
+		std::string str;
+		while(std::getline(std::cin, str)){
+			std::vector<std::string> strs=splitString(str, ",");
 			printf("registerChar(L\"%s\", (wchar_t)%s);\n", strs[0].c_str(), strs[2].c_str());
 		}
 	}else if(argc==2){
 		if(!strcmp(argv[1], "obs")){
-			while(gets(buf)){
-				std::string str=buf;
-				std::vector<string> strs=splitString(str, ",");
+			std::string str;
+			while(std::getline(std::cin, str)){
+				std::vector<std::string> strs=splitString(str, ",");
 				printf("%s\n", strs[0].c_str());
 			}
 		}else if(!strcmp(argv[1], "chars")){
 			int i=0;
-			while(gets(buf)){
-				std::string str=buf;
-				std::vector<string> strs=splitString(str, ",");
+				std::string str;
+			while(std::getline(std::cin, str)){
+				std::vector<std::string> strs=splitString(str, ",");
 				printf("(wchar_t)0x%04x,", atoi(strs[2].c_str()));
 				i++;
 				if(i%4==0)

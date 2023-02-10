@@ -12,7 +12,6 @@
 #include <tcw/twSDLDC.h>
 #include "xpms/Glass.xpm"
 #include "xpms/CheckBox.xpm"
-using namespace std;
 
 XTBSkin::XTBSkin(){
 	m_glass=twSDLDC::loadFromXPM(Glass);
@@ -23,7 +22,7 @@ XTBSkin::~XTBSkin(){
 	delete m_checkBox;
 }
 
-void XTBSkin::drawSolidBorder(twDC *dc, const twRect& rt, const twWndStatus&, const wstring&){
+void XTBSkin::drawSolidBorder(twDC *dc, const twRect& rt, const twWndStatus&, const std::wstring&){
 	drawEdge(dc, rt, twES_solid);
 }
 bool XTBSkin::hitTestSolidBorder(const twRect& rt, const twPoint& pt){
@@ -33,7 +32,7 @@ twRect XTBSkin::getSolidBorderCliRect(const twRect& rt){
 	return twRect(rt.x+1, rt.y+1, rt.w-2, rt.h-2);
 }
 
-void XTBSkin::drawPanelBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const wstring&){
+void XTBSkin::drawPanelBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const std::wstring&){
 	//twColor ctrl=getCtrlColor();
 	twColor col;
 	int x1=rt.x, x2=rt.x+rt.w-1;
@@ -61,7 +60,7 @@ twRect XTBSkin::getPanelBorderCliRect(const twRect& rt){
 	return twRect(rt.x+2, rt.y+2, rt.w-4, rt.h-4);
 }
 
-void XTBSkin::drawDialogBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const wstring& str){
+void XTBSkin::drawDialogBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const std::wstring& str){
 	twRect rt2;
 	
 	//twColor ctrl=getCtrlColor();
@@ -97,7 +96,7 @@ twRect XTBSkin::getDialogBorderCliRect(const twRect& rt){
 	return twRect(rt.x+2, rt.y+2+getTitleHeight(), rt.w-4, rt.h-4-getTitleHeight());
 }
 
-void XTBSkin::drawOverlappedBorder(twDC * dc, const twRect& rt, const twWndStatus& s, const wstring& str){
+void XTBSkin::drawOverlappedBorder(twDC * dc, const twRect& rt, const twWndStatus& s, const std::wstring& str){
 	twRect rt2;
 	
 	//twColor ctrl=getCtrlColor();

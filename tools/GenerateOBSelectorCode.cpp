@@ -16,8 +16,6 @@
 #include <limits.h>
 #include <assert.h>
 
-using namespace std;
-
 struct key_t{
 	std::wstring str;
 	key_t(const std::wstring& s){

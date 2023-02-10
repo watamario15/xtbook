@@ -10,8 +10,6 @@
 #include <tcw/twMsgBox.h>
 #include <tcw/twApp.h>
 
-using namespace std;
-
 twMsgDlg::twMsgDlg(std::wstring str, twMsgBoxBtns b){
 	int btns;
 	if(b==twMBB_ok){
@@ -66,7 +64,7 @@ twMsgDlg::twMsgDlg(std::wstring str, twMsgBoxBtns b){
 	twSize sz;
 	std::wstring strWrapped=getFont()->wrapString(str, tw_app->getScrSize().w-xSpace*2-8);
 	sz=getFont()->measure(strWrapped);
-	dW=max(dW, sz.w)+xSpace*2;
+	dW=std::max(dW, sz.w)+xSpace*2;
 	
 	sX=(dW-sW)/2;
 	sY=sz.h+xSpace*2;

@@ -164,7 +164,7 @@ std::wstring TWUtils::stringWithIntValue(int iv){
 		return g_positives[iv];
 	}else if(iv>=-9 && iv<=-1){
 		return g_positives[-1-iv];
-	}else if(iv==-2147483648)
+	}else if(iv==-2147483647-1)
 		// we have to filter this case because
 		// if this value was negated, result is unknown.
 		return g_minIntString;

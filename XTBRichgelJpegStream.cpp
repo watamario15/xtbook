@@ -13,7 +13,7 @@ m_stream(stream){}
 
 XTBRichgelJpegStream::~XTBRichgelJpegStream(){}
 
-int XTBRichgelJpegStream::read(uchar *Pbuf, int max_bytes_to_read,
+int XTBRichgelJpegStream::read(jpgd::uint8 *Pbuf, int max_bytes_to_read,
 							   bool *Peof_flag){
 	size_t readBytes;
 	readBytes=m_stream->readToBuffer(Pbuf, max_bytes_to_read);

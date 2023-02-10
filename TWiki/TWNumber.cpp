@@ -46,7 +46,7 @@ TWNumber::TWNumber():
 m_representations(TWMakeNumberRepresentation((TWNumberInteger)0)){}
 
 TWNumber::TWNumber(bool value):
-m_representations(TWMakeNumberRepresentation(value?1LL:0LL)),
+m_representations(TWMakeNumberRepresentation((TWNumberInteger)(value?1LL:0LL))),
 m_representationType(TWNumberRepresentationTypeInteger){}
 
 TWNumber::TWNumber(TWNumberInteger value):

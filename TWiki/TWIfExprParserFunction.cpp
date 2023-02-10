@@ -36,7 +36,7 @@ TWPreprocessorNode *TWIfExprParserFunction::execute(const std::wstring& arg0, co
 		if(!num.isZero())
 			isTrue=true;
 	}catch(const std::wstring& str){
-		std:wstring outs;
+		std::wstring outs;
 		outs=L"<strong class=\"error\">"+TWUtils::escapeHTMLSpecialChars(str)+L"</strong>";
 		throw outs;
 	}

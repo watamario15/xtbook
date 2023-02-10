@@ -14,8 +14,6 @@
 #include <cmath>
 #include <cassert>
 
-using namespace std;
-
 XTBScrollView::XTBScrollView(){
 	m_contentSize=twSize(0, 0);
 	m_contentLocation=twPoint(0, 0);

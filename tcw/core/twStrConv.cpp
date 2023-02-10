@@ -8,11 +8,9 @@
  */
 
 #include <tcw/twStrConv.h>
-#ifdef __MACOSX__
+#ifdef __APPLE__
 #include <stdlib.h>
 #endif
-
-using namespace std;
 
 
 static uint32_t invalidUtf8(char ** const ptr){

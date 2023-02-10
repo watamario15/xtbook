@@ -13,19 +13,16 @@
 #include <cstring>
 #include <string>
 #include <vector>
-
-using namespace std;
+#include <iostream>
 
 int main(int argc, char **argv){
-	char buf[256];
-	string str;
-	while(gets(buf)){
-		if(buf[0]==0)
+	std::string str;
+	while(std::getline(std::cin, str)){
+		if(str[0]==0)
 			continue;
-		if(buf[1]=='!')
+		if(str[1]=='!')
 			continue;
-		str=buf;
-		if(str.find('\t')==string::npos)
+		if(str.find('\t')==std::string::npos)
 			continue;
 		
 		unsigned int col;

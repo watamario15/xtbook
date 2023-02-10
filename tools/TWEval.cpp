@@ -10,6 +10,7 @@
 #include <stdlib.h>
 
 #include <string>
+#include <iostream>
 
 #include "../TWiki/TWUtils.h"
 #include "../TWiki/TWExpressionReader.h"
@@ -52,8 +53,8 @@ std::wstring TWUtils::evaluateExpression(const std::wstring &expr){
 }
 
 int main(){
-	char buf[32767];
-	while(gets(buf)){
+	std::string buf;
+	while(std::getline(std::cin, buf)){
 		std::wstring s;
 		s=TWUtils::m2w(buf);
 		

@@ -10,8 +10,6 @@
 #include <tcw/twRadioBtn.h>
 #include <tcw/twBaseSkin.h>
 
-using namespace std;
-
 static void unCheckRadios(twWnd *w){
 	twRadioBtn *b;
 	if((b=dynamic_cast<twRadioBtn *>(w))){
@@ -41,13 +39,13 @@ void twRadioBtn::runCmd(){
 	invalidate();
 	sendCmdToParent();
 }
-void twRadioBtn::clientKeyDown(const wstring& str){
+void twRadioBtn::clientKeyDown(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=true; 
 		invalidate();
 	}
 }
-void twRadioBtn::clientKeyUp(const wstring& str){
+void twRadioBtn::clientKeyUp(const std::wstring& str){
 	if(str==L" "){
 		m_keyPress=false; 
 		invalidate();

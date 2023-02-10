@@ -11,8 +11,6 @@
 #include <tcw/twDC.h>
 #include <tcw/twException.h>
 
-using namespace std;
-
 #define MIN(a, b) (((a)<(b))?(a):(b))
 #define MAX(a, b) (((a)>(b))?(a):(b))
 
@@ -62,8 +60,8 @@ void twDC::drawLine(twColor col, const twPoint& p1, const twPoint& p2){
 		x1=p1.x<<18; x2=p2.x<<18;
 		y1=p1.y; y2=p2.y;
 		if(y1>y2){
-			swap(x1, x2);
-			swap(y1, y2);
+			std::swap(x1, x2);
+			std::swap(y1, y2);
 		}
 		dx=(x2-x1)/(y2-y1+1);
 		if(y1<m_clipRect.y){

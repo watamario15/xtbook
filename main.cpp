@@ -30,7 +30,6 @@
 #include "XTBCoreDictionaryTypeRegister.h"
 #include "XTBDictionary.h"
 #include "TPList/TPLNumber.h"
-using namespace std;
 
 int Main(int argc, char *argv[])
 {
@@ -40,7 +39,7 @@ int Main(int argc, char *argv[])
 		initStruct.title=L"XTBook";
 		initStruct.scrSize=twSize(480, 320);
 		initStruct.resizable=true;
-#ifdef WIN32
+#ifdef _WIN32
 		// Tell TCW to use full-screen mode in Sharp Brain(TM).
 	
 			initStruct.scrSize=twSize(440, 290);
@@ -49,7 +48,7 @@ int Main(int argc, char *argv[])
 #endif
 		twInit(initStruct);
 		atexit(twExit);
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		XTBErrorExit("Error while initializing tcw: %s", ex.what());
 	}catch(...){
 		XTBErrorExit("Error while initializing tcw.");
@@ -58,7 +57,7 @@ int Main(int argc, char *argv[])
 	// Setup the initial desktop. This shows the application icon of XTBook.
 	try{
 		twSetDesktop(new XTBRootWindow());
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		XTBErrorExit("Failed to setup the root window: %s", ex.what());
 	}catch(...){
 		XTBErrorExit("Failed to setup the root window.");
@@ -67,7 +66,7 @@ int Main(int argc, char *argv[])
 	// Enter the main loop.
 	try{
 		tw_event->mainLoop();
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		XTBErrorExit("Unhandled exception: %s", ex.what());
 	}catch(...){
 		XTBErrorExit("Unhandled exception.");
@@ -102,14 +101,14 @@ static void errorExit(const std::wstring& msg){
 
 /** Short version. */
 std::wstring XTBShortVersionInformation(){
-	return L"XTBook-0.2.6"; // removed russian(setSoftKeyboardVisible) from XTBBrowser
+	return L"XTBook-0.2.7"; // removed russian(setSoftKeyboardVisible) from XTBBrowser
 	//return L"XTBook-0.2.6-russian";
 }
 
 /** Full version information. */
 std::wstring XTBLongVersionInformation(){
 	return XTBShortVersionInformation()+L" Copyright 2011-2012 Nexhawks, all rights reserved.\n"
-	L"Visit http://www.nexhawks.net/ for more informations.";
+	L"Visit https://www.nexhawks.net/ for more informations.";
 }
 
 void initThreadSafeComponents();
@@ -128,7 +127,7 @@ void initThreadSafeComponents(){
 		if(locale){
 			XTBSetLocale(twM2W(locale->UTF8String()));
 		}
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		XTBLog("Locale was reseted because of exception \"%s\".", ex.what());
 		// reset locale
 		XTBUserDefaults *def=XTBUserDefaults::standardUserDefaults();
@@ -166,7 +165,7 @@ void initThreadSafeComponents(){
 		
 		XTBDictionary::scanDictionaries();
 		
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		errorExit(curStep+L"\n"+twM2W(ex.what()));
 		return;
 	}catch(...){
@@ -187,7 +186,7 @@ void initThreadUnsafeComponents(){
 	try{
 		XTBSetLocale(XTBDefaultLocale);
 		
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		XTBErrorExit("Failed to initialize the locale: %s", ex.what());
 		return;
 	}catch(...){
@@ -199,7 +198,7 @@ void initThreadUnsafeComponents(){
 	const twFont *oldFont=tw_defFont;
 	try{
 		tw_defFont=new XTBHGGothicAA();
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		errorExit(XTBLocalizedString(L"XTBInitFontFailed")+L"\n"+twM2W(ex.what()));
 		return;
 	}catch(...){
@@ -210,7 +209,7 @@ void initThreadUnsafeComponents(){
 	
 	try{
 		XTBUserDefaults::standardUserDefaults();
-	}catch(const exception& ex){
+	}catch(const std::exception& ex){
 		errorExit(XTBLocalizedString(L"XTBInitPreferenceFailed")+L"\n"+twM2W(ex.what()));
 		return;
 	}catch(...){

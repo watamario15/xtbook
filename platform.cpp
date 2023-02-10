@@ -70,7 +70,7 @@ XTBSysString XTBChooseOpenFile(const std::wstring& typeName, const std::wstring&
 extern "C"
 int SDL_main(int argc, char *argv[]){
 	// create Application Support directory.
-	mkdir((string(getenv("HOME"))+"/Library/Application Support/XTBook").c_str(), 0766);
+	mkdir((std::string(getenv("HOME"))+"/Library/Application Support/XTBook").c_str(), 0766);
 	// call the entry point.
 	return Main(argc, argv);
 }
@@ -90,7 +90,7 @@ std::vector<XTBSysString> XTBScanDirectory(const XTBSysString& path){
 	struct dirent *ent;
 	
 	std::vector<XTBSysString>  ret;
-	string filePath;
+	std::string filePath;
 	
 	// if couldn't open the directory, return the empty vector.
 	if(!dir)
@@ -118,11 +118,11 @@ std::vector<XTBSysString> XTBScanDirectory(const XTBSysString& path){
 
 XTBSysString XTBGetStandardUserDefaultsPath(){
 	// Mac OS X's standard preference path.
-	return string(getenv("HOME"))+"/Library/Preferences/com.nexhawks.XTBook.plist";
+	return std::string(getenv("HOME"))+"/Library/Preferences/com.nexhawks.XTBook.plist";
 }
 
 XTBSysString XTBGetStandardHistoryPath(){
-	return string(getenv("HOME"))+"/Library/Application Support/XTBook/History";
+	return std::string(getenv("HOME"))+"/Library/Application Support/XTBook/History";
 }
 
 XTBSysString XTBSysStringFromWString(const std::wstring& s){
@@ -271,11 +271,11 @@ XTBSysString XTBGetAppDir(){
 	// retrive the path of the application.
 	GetModuleFileName(NULL, buf, 512);
 	
-	wstring str=buf;
+	std::wstring str=buf;
 	// find the last path separator.
-	wstring::size_type pos=MIN(str.rfind(L"/"), str.rfind(L"\\"));
+	std::wstring::size_type pos=MIN(str.rfind(L"/"), str.rfind(L"\\"));
 
-	if(pos==string::npos)
+	if(pos==std::string::npos)
 		// ... only to find the base name. no directory infomation available.
 		return L"";
 	else
@@ -288,7 +288,7 @@ std::vector<XTBSysString> XTBScanDirectory(const XTBSysString& path){
 	WIN32_FIND_DATA fd;
 	HANDLE h;
 	std::vector<XTBSysString>  ret;
-	wstring filePath;
+	std::wstring filePath;
 	
 	// open the Win32 find handle.
 	h=FindFirstFileExW((path+L"\\*").c_str(),
@@ -374,6 +374,8 @@ static void XTBRunStartupItem(const XTBSysString& path){
 
 #include <dirent.h>
 
+#include <iostream>
+
 static std::string g_argv0;
 
 __attribute__((noreturn))
@@ -389,10 +391,10 @@ XTBSysString XTBChooseOpenFile(const std::wstring& typeName, const std::wstring&
 	// ask for the file-name in the console.
 	wprintf(L"*DIALOG* Open File Request\n");
 	wprintf(L"Type path for %ls (*.%ls):\n", typeName.c_str(), ext.c_str());
-	char buf1[4096];
+	XTBSysString buf1;
 	
 	// TODO: more safe way instead of gets.
-	gets(buf1);
+	std::getline(std::cin, buf1);
 	
 	// return the file name.
 	return buf1;
@@ -412,8 +414,8 @@ FILE *XTBOpen(const XTBSysString& str, const char *mode){
 
 XTBSysString XTBGetAppDir(){
 	// this is much like `dirname`!!
-	string::size_type pos=MIN(g_argv0.rfind("/"), g_argv0.rfind("\\"));
-	if(pos==string::npos)
+	std::string::size_type pos=MIN(g_argv0.rfind("/"), g_argv0.rfind("\\"));
+	if(pos==std::string::npos)
 		// failed. fall back.
 		return "";
 	else
@@ -428,7 +430,7 @@ std::vector<XTBSysString> XTBScanDirectory(const XTBSysString& path){
 	
 	
 	std::vector<XTBSysString>  ret;
-	string filePath;
+	std::string filePath;
 	
 	if(!dir)
 		return ret;
@@ -449,11 +451,11 @@ std::vector<XTBSysString> XTBScanDirectory(const XTBSysString& path){
 
 XTBSysString XTBGetStandardUserDefaultsPath(){
 	// preference file as a hidden file in the home directory.
-	return string(getenv("HOME"))+"/.xtbook.plist";
+	return std::string(getenv("HOME"))+"/.xtbook.plist";
 }
 
 XTBSysString XTBGetStandardHistoryPath(){
-	return string(getenv("HOME"))+"/.xtbook_history";
+	return std::string(getenv("HOME"))+"/.xtbook_history";
 }
 
 XTBSysString XTBSysStringFromWString(const std::wstring& s){

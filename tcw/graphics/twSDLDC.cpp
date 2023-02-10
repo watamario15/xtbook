@@ -17,7 +17,7 @@
 #endif
 
 #if USE_SDL_IMAGE
-#include <SDL/SDL_image.h>
+#include <SDL_image.h>
 #endif
 #include <tcw/twException.h>
 #include <tcw/twSDLDC.h>

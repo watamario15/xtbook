@@ -11,8 +11,6 @@
 #include <tcw/twBaseSkin.h>
 #include <tcw/twWnd.h>
 
-using namespace std;
-
 twBaseSkin *tw_curSkin;
 
 void twInitSkin();
@@ -122,7 +120,7 @@ void twBaseSkin::drawFocusRect(twDC *dc, const twRect& rt){
 	}
 }
 
-void twBaseSkin::drawSolidBorder(twDC *dc, const twRect& rt, const twWndStatus&, const wstring&){
+void twBaseSkin::drawSolidBorder(twDC *dc, const twRect& rt, const twWndStatus&, const std::wstring&){
 	drawEdge(dc, rt, twES_solid);
 }
 bool twBaseSkin::hitTestSolidBorder(const twRect& rt, const twPoint& pt){
@@ -132,7 +130,7 @@ twRect twBaseSkin::getSolidBorderCliRect(const twRect& rt){
 	return twRect(rt.x+1, rt.y+1, rt.w-2, rt.h-2);
 }
 
-void twBaseSkin::drawPanelBorder(twDC *dc, const twRect& rt, const twWndStatus&, const wstring&){
+void twBaseSkin::drawPanelBorder(twDC *dc, const twRect& rt, const twWndStatus&, const std::wstring&){
 	drawEdge(dc, rt, twES_sunken);
 }
 bool twBaseSkin::hitTestPanelBorder(const twRect&, const twPoint&){
@@ -142,7 +140,7 @@ twRect twBaseSkin::getPanelBorderCliRect(const twRect& rt){
 	return twRect(rt.x+2, rt.y+2, rt.w-4, rt.h-4);
 }
 
-void twBaseSkin::drawDialogBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const wstring& str){
+void twBaseSkin::drawDialogBorder(twDC *dc, const twRect& rt, const twWndStatus& s, const std::wstring& str){
 	twRect rt2;
 	
 	drawEdge(dc, rt, twES_raised);
@@ -164,7 +162,7 @@ twRect twBaseSkin::getDialogBorderCliRect(const twRect& rt){
 	return twRect(rt.x+3, rt.y+3+getTitleHeight(), rt.w-6, rt.h-6-getTitleHeight());
 }
 
-void twBaseSkin::drawOverlappedBorder(twDC * dc, const twRect& rt, const twWndStatus& s, const wstring& str){
+void twBaseSkin::drawOverlappedBorder(twDC * dc, const twRect& rt, const twWndStatus& s, const std::wstring& str){
 	twRect rt2;
 	
 	drawEdge(dc, rt, twES_raised);
