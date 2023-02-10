@@ -1,13 +1,13 @@
 SDL=/mnt/c/Users/watamario15/Documents/wata/Git/SDL-1.2/build-wince/.libs
 SDLINCLUDE=/mnt/c/Users/watamario15/Documents/wata/Git/SDL-1.2/include
 CEGCC=/opt/cegcc
-CC=arm-mingw32ce-gcc
-CXX=arm-mingw32ce-g++
-LD=arm-mingw32ce-g++
-STRIP=arm-mingw32ce-strip
-WINDRES=arm-mingw32ce-windres
+CC=$(CEGCC)/bin/arm-mingw32ce-gcc
+CXX=$(CEGCC)/bin/arm-mingw32ce-g++
+LD=$(CEGCC)/bin/arm-mingw32ce-g++
+STRIP=$(CEGCC)/bin/arm-mingw32ce-strip
+WINDRES=$(CEGCC)/bin/arm-mingw32ce-windres
 CCFLAGS= -I$(SRCPATH)/tcw/include -I$(SRCPATH) -I$(SDLINCLUDE) -DEV_PLATFORM_WIN32 -DUNICODE -D_UNICODE -DEV_UNSAFE_SWPRINTF -mwin32 -Os -mcpu=arm926ej-s -D_WIN32_WCE=0x500 -D_LARGEFILE_SOURCE=1 -D_LARGEFILE64_SOURCE=1 -D_FILE_OFFSET_BITS=64 -DNDEBUG
-CXXFLAGS=$(CCFLAGS) --std=gnu++98
+CXXFLAGS=$(CCFLAGS) --std=gnu++03
 LDFLAGS=-L$(SDL) -lSDLmain -lSDL -lmmtimer -mwin32 -mthreads -static
 TARGET=AppMain.exe
 PACKAGE=build
