@@ -29,10 +29,51 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release delete -R ${{ github.repository }} ${{ steps.time.outputs.version }} -y --cleanup-tag || true
-          gh release create -R ${{ github.repository }} ${{ steps.time.outputs.version }} -d -t ${{ steps.time.outputs.version }} -n 'These XTBook dictionary files (.xtbdict) are automatically created from the version ${{ steps.time.outputs.version }}. **You must extract them with an extractor such as `tar` or [7-Zip](http://www.7-zip.org/) before using them on the XTBook.** For 7-Zip, download all splitted files and specify to extract the first archive. For `tar`, concatenate all splitted files with `tarcat` and pipe them to `tar`. You may find some MediaWiki based wikis that are not distributed below, such as images for Japanese Uncyclopedia, Brain Wiki, and English Wikipedia at [OSDN](https://osdn.net/projects/xtbook/). Open an [issue](https://github.com/watamario15/xtbook/issues) for Wikimedia wikis that are not currently listed here. License information can be found [here](https://ja.osdn.net/projects/xtbook/wiki/FrontPage).
+          if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }}; then
+            gh release create -R ${{ github.repository }} ${{ steps.time.outputs.version }} -d -t ${{ steps.time.outputs.version }} -n 'These XTBook dictionary files (.xtbdict) are automatically built from the version ${{ steps.time.outputs.version }}. **You must extract them with an extractor such as `tar` or [7-Zip](http://www.7-zip.org/) before using them on the XTBook.** For 7-Zip, download all splitted files and specify to extract the first archive. For `tar`, concatenate all splitted files with `tarcat` and pipe them to `tar`. Open an [issue](https://github.com/watamario15/xtbook/issues) for Wikimedia wikis you need that are not currently listed here. License information can be found [here](https://watamario15.github.io/xtbook).
 
-          ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://sevenzip.osdn.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `tarcat` を用いて全てを結合し、それをパイプで `tar` に流して展開します。Uncyclopedia 日本語版の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、[OSDN](https://ja.osdn.net/projects/xtbook/) で手動配布しています。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://ja.osdn.net/projects/xtbook/wiki/FrontPage)から確認してください。'
+            Since some dictionaries such as Brain Wiki, English Wikipedia, and images for Japanese Uncyclopedia cannot be automatically built, the repository owner manually builds them and uploads afterwards here. However, it is not guaranteed that I build all these dictionaries every month. If you cannot find a dictionary file you need in the latest release, wait for several days or grab one from an older release.
+
+            **Other dictionary files**
+            - Images for Japanese Wikipedia: [JAIST](https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
+            - Japanese Uncyclopedia: [JAIST](https://jaist.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) or [JAIST](https://jaist.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
+
+            ---
+
+            ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://sevenzip.osdn.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `tarcat` を用いて全てを結合し、それをパイプで `tar` に流して展開します。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://watamario15.github.io/xtbook)から確認できます。
+
+            Uncyclopedia 日本語版の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、後日リポジトリオーナーが手動生成してリリースに追加しています。ただし、毎回全ての辞書をビルドするとは限りません。最新リリースに求めている辞書がない場合は、数日待ってもう一度見に来るか、過去のリリースからダウンロードしてください。
+
+            **他の辞書ファイル**
+            - 日本語版 Wikipedia 画像: [JAIST](https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
+            - 日本語版 Uncyclopedia: [JAIST](https://jaist.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) または [JAIST](https://jaist.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
+
+            ---
+
+            - `jawiki`: Japanese Wikipedia
+            - `jawikibooks`: Japanese Wikibooks
+            - `jawikinews`: Japanese Wikinews
+            - `jawikiquote`: Japanese Wikiquote
+            - `jawikisource`: Japanese Wikisource
+            - `jawiktionary`: Japanese Wiktionary
+            - `enwiki`: English Wikipedia
+            - `enwikibooks`: English Wikibooks
+            - `enwikinews`: English Wikinews
+            - `enwikiquote`: English Wikiquote
+            - `enwikisource`: English Wikisource
+            - `enwiktionary`: English Wiktionary
+            - `simplewiki`: Simple English Wikipedia
+            - `simplewiktionary`: Simple English Wiktionary	
+            - `eowiki`: Esperanto Wikipedia
+            - `dewiki`: German Wikipedia
+            - `eswiki`: Spanish Wikipedia
+            - `frwiki`: French Wikipedia
+            - `itwiki`: Italian Wikipedia
+            - `ruwiki`: Russian Wikipedia
+            - `specieswiki`: Wikispecies
+            - `jaunwiki`: Japanese Uncyclopedia
+            - `jabrain`: Brain Wiki'
+          fi
 
   dictgen:
     name: Convert
@@ -47,30 +88,42 @@ jobs:
             jawikiquote,
             jawikisource,
             jawiktionary,
+            enwikibooks,
+            enwikinews,
+            enwikiquote,
+            enwikisource,
+            enwiktionary,
+            simplewiki,
+            simplewiktionary,
             eowiki,
+            dewiki,
+            eswiki,
+            frwiki,
+            itwiki,
+            ruwiki,
             specieswiki
           ] # enwiki is too big to build on GitHub Actions
     steps:
-      - name: Prepare
-        run: |
-          curl -sSfLO https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
-          7z x xtbookconv.7z
-          curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/${{ matrix.wiki }}.plist
-          curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/xtbconv
-          chmod +x xtbconv
-          sudo apt install -y mecab-ipadic libmecab2 libkakasi2
-
       - name: Convert
-        run: |
-          export PATH=${{ github.workspace }}:$PATH
-          export DICTDIR=${{ github.workspace }}
-          export PLIST=${{ github.workspace }}
-          ./xtbconv wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.version }} 1900M
-
-      - name: Upload
-        run: gh release upload -R ${{ github.repository }} ${{ needs.create_release.outputs.version }} ./*.xtbdict.tar.* --clobber
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }} | grep '^\s*asset:\s*${{ matrix.wiki }}-${{ needs.create_release.outputs.version }}.xtbdict.tar'; then
+            curl -sSfLO https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
+            7z x xtbookconv.7z
+            curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/${{ matrix.wiki }}.plist
+            curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/xtbconv
+            chmod +x xtbconv
+            sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+
+            export PATH=${{ github.workspace }}:$PATH
+            export DICTDIR=${{ github.workspace }}
+            export PLIST=${{ github.workspace }}
+            export WIKIMEDIA_MIRROR=https://mirror.accum.se/mirror/wikimedia.org/dumps
+            ./xtbconv wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.version }} 1900M
+
+            gh release upload -R ${{ github.repository }} ${{ needs.create_release.outputs.version }} ./*.xtbdict.tar.* --clobber
+          fi
 
   publish:
     name: Publish
