@@ -109,18 +109,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }} | grep '^\s*asset:\s*${{ matrix.wiki }}-${{ needs.create_release.outputs.version }}.xtbdict.tar'; then
-            curl -sSfLO https://github.com/watamario15/xtbook/releases/download/v0.2.6/xtbookconv.7z
-            7z x xtbookconv.7z
-            curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/info-plists/${{ matrix.wiki }}.plist
-            curl -sSfLO https://github.com/watamario15/dotfiles/raw/main/tools/xtbconv
-            chmod +x xtbconv
-            sudo apt install -y mecab-ipadic libmecab2 libkakasi2
+            curl -sSfLO https://github.com/watamario15/MkXTBWikiplexus/releases/download/r3/linux-glibc2.34-amd64.zip
+            unzip -oq linux-glibc2.34-amd64.zip -d xtbconv
+            sudo apt install -y libkakasi2
 
-            export PATH=${{ github.workspace }}:$PATH
+            export PATH=${{ github.workspace }}/xtbconv:$PATH
             export DICTDIR=${{ github.workspace }}
-            export PLIST=${{ github.workspace }}
-            export WIKIMEDIA_MIRROR=https://mirror.accum.se/mirror/wikimedia.org/dumps
-            ./xtbconv wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.version }} 1900M
+            export PLIST=${{ github.workspace }}/xtbconv/info-plists
+            export WIKIMEDIA_MIRROR=${{ vars.WIKIMEDIA_MIRROR }}
+            xtbconv wikimedia ${{ matrix.wiki }} ${{ needs.create_release.outputs.version }} 1900M 2>&1
 
             gh release upload -R ${{ github.repository }} ${{ needs.create_release.outputs.version }} ./*.xtbdict.tar.* --clobber
           fi
