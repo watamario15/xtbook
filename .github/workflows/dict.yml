@@ -109,9 +109,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }} | grep '^\s*asset:\s*${{ matrix.wiki }}-${{ needs.create_release.outputs.version }}.xtbdict.tar'; then
-            curl -sSfLO https://github.com/watamario15/MkXTBWikiplexus/releases/download/r3/linux-glibc2.34-amd64.zip
-            unzip -oq linux-glibc2.34-amd64.zip -d xtbconv
-            sudo apt install -y libkakasi2
+            curl -sSfLO https://github.com/watamario15/MkXTBWikiplexus/releases/download/r3/linux-amd64.zip
+            unzip -oq linux-amd64.zip -d xtbconv
+            sudo apt install -y mecab-ipadic-utf8 libkakasi2
 
             export PATH=${{ github.workspace }}/xtbconv:$PATH
             export DICTDIR=${{ github.workspace }}
