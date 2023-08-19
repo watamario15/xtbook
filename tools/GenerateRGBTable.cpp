@@ -13,6 +13,8 @@
 #include <string>
 #include <vector>
 
+#include <iostream>
+
 using namespace std;
 
 
@@ -29,17 +31,15 @@ static std::string toLower(const std::string& str){
 }
 
 int main(int argc, char **argv){
-	char buf[256];
 	string str;
 	
 	if(argc==1){
 	
-		while(gets(buf)){
-			if(buf[0]==0)
+		while(std::getline(std::cin, str)){
+			if(str[0]==0)
 				continue;
-			if(buf[1]=='!')
+			if(str[1]=='!')
 				continue;
-			str=buf;
 			if(str.find('\t')==string::npos)
 				continue;
 			
@@ -60,12 +60,11 @@ int main(int argc, char **argv){
 			puts("USAGE: GenerateRGBTable [MODE]");
 			puts("MDOES: obs colors");
 		}else if(!strcmp(argv[1], "obs")){
-			while(gets(buf)){
-				if(buf[0]==0)
+			while(std::getline(std::cin, str)){
+				if(str[0]==0)
 					continue;
-				if(buf[1]=='!')
+				if(str[1]=='!')
 					continue;
-				str=buf;
 				if(str.find('\t')==string::npos)
 					continue;
 				
@@ -83,12 +82,11 @@ int main(int argc, char **argv){
 			}
 		}else if(!strcmp(argv[1], "colors")){
 			int i=0;
-			while(gets(buf)){
-				if(buf[0]==0)
+			while(std::getline(std::cin, str)){
+				if(str[0]==0)
 					continue;
-				if(buf[1]=='!')
+				if(str[1]=='!')
 					continue;
-				str=buf;
 				if(str.find('\t')==string::npos)
 					continue;
 				

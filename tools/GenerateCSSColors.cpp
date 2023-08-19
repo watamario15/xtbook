@@ -13,18 +13,17 @@
 #include <cstring>
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
 int main(int argc, char **argv){
-	char buf[256];
 	string str;
-	while(gets(buf)){
-		if(buf[0]==0)
+	while(std::getline(std::cin, str)){
+		if(str[0]==0)
 			continue;
-		if(buf[1]=='!')
+		if(str[1]=='!')
 			continue;
-		str=buf;
 		if(str.find('\t')==string::npos)
 			continue;
 		

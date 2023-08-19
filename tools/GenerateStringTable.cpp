@@ -12,6 +12,7 @@
 #include <cstring>
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -24,30 +25,31 @@ static void writeLE32(uint32_t value){
 	fwrite(buf, 1, 4, stdout);
 }
 
-static void parseLine(char *line){
+static void parseLine(std::string &line){
 	
 	{
-		char *ptr=strchr(line, '#');
-		if(ptr)
-			*ptr=0;
+		size_t pos = line.find('#');
+		if(pos != line.npos)
+			line.resize(pos);
 	}
+
+	const char *szLine = line.c_str();
 	
-	while(*line==' ')
-		line++;
+	while(*szLine==' ')
+		szLine++;
 	
-	if(*line==13 || *line==10 || *line==0)
+	if(*szLine==13 || *szLine==10 || *szLine==0)
 		return;
 	
-	uint32_t length;
-	length=strlen(line);
+	size_t length=strlen(szLine);
 	
 	writeLE32(length);
 	
-	fwrite(line, 1, length, stdout);
+	fwrite(szLine, 1, length, stdout);
 }
 
 int main(int argc, char **argv){
-	char buf[4096];
+	std::string buf;
 	
 	if(argc==3){
 		freopen(argv[1], "r", stdin);
@@ -55,7 +57,7 @@ int main(int argc, char **argv){
 		
 	}
 	
-	while(gets(buf)){
+	while(std::getline(std::cin, buf)){
 		parseLine(buf);
 	}
 	

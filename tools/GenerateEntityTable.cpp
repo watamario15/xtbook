@@ -14,6 +14,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <iostream>
+
 using namespace std;
 
 
@@ -73,24 +75,23 @@ std::vector<string> splitString(const std::string& str, const std::string& delim
 }
 
 int main(int argc, char **argv){
-	char buf[4096];
 	if(argc==1){
-		while(gets(buf)){
-			std::string str=buf;
+		std::string str;
+		while(std::getline(std::cin, str)){
 			std::vector<string> strs=splitString(str, ",");
 			printf("registerChar(L\"%s\", (wchar_t)%s);\n", strs[0].c_str(), strs[2].c_str());
 		}
 	}else if(argc==2){
 		if(!strcmp(argv[1], "obs")){
-			while(gets(buf)){
-				std::string str=buf;
+			std::string str;
+			while(std::getline(std::cin, str)){
 				std::vector<string> strs=splitString(str, ",");
 				printf("%s\n", strs[0].c_str());
 			}
 		}else if(!strcmp(argv[1], "chars")){
 			int i=0;
-			while(gets(buf)){
-				std::string str=buf;
+				std::string str;
+			while(std::getline(std::cin, str)){
 				std::vector<string> strs=splitString(str, ",");
 				printf("(wchar_t)0x%04x,", atoi(strs[2].c_str()));
 				i++;

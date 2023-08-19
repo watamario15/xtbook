@@ -8,15 +8,15 @@
 
 #pragma once
 
-#include "RichgelJpeg/jpegdecoder.h"
+#include "RichgelJpeg/jpgd.h"
 #include "XTBStream.h"
 
-class XTBRichgelJpegStream: public jpeg_decoder_stream{
+class XTBRichgelJpegStream: public jpgd::jpeg_decoder_stream{
 	XTBStream *m_stream;
 public:
 	XTBRichgelJpegStream(XTBStream *);
 	virtual ~XTBRichgelJpegStream();
 	
-	virtual int read(uchar *Pbuf, int max_bytes_to_read, bool *Peof_flag);
+	virtual int read(jpgd::uint8 *Pbuf, int max_bytes_to_read, bool *Peof_flag);
 	
 };

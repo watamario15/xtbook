@@ -9,14 +9,14 @@
 #pragma once
 
 #include "XTBStream.h"
+#include "XTBRichgelJpegStream.h"
 
-class jpeg_decoder;
 class XTBRichgelJpegStream;
 
 class XTBJpegLoader{
 	XTBStream *m_stream;
 	XTBRichgelJpegStream *m_stream2;
-	jpeg_decoder *m_decoder;
+	jpgd::jpeg_decoder *m_decoder;
 	
 	void convert888To565(uint16_t *dest,
 						 const uint8_t *src,

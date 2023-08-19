@@ -102,14 +102,14 @@ static void errorExit(const std::wstring& msg){
 
 /** Short version. */
 std::wstring XTBShortVersionInformation(){
-	return L"XTBook-0.2.6"; // removed russian(setSoftKeyboardVisible) from XTBBrowser
+	return L"XTBook-0.2.7"; // removed russian(setSoftKeyboardVisible) from XTBBrowser
 	//return L"XTBook-0.2.6-russian";
 }
 
 /** Full version information. */
 std::wstring XTBLongVersionInformation(){
 	return XTBShortVersionInformation()+L" Copyright 2011-2012 Nexhawks, all rights reserved.\n"
-	L"Visit http://www.nexhawks.net/ for more informations.";
+	L"Visit https://www.nexhawks.net/ for more informations.";
 }
 
 void initThreadSafeComponents();

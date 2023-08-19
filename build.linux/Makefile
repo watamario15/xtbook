@@ -1,11 +1,11 @@
 CC=gcc
 CXX=g++
 LD=g++
-CCFLAGS= -I$(SRCPATH)/tcw/include -I$(SRCPATH) -I/usr/include/SDL -DEV_PLATFORM_GENERICPOSIX -DUNICODE -D_UNICODE -Os
+CCFLAGS= -I$(SRCPATH)/tcw/include -I$(SRCPATH) -I/usr/include/SDL -DEV_PLATFORM_GENERICPOSIX -DUNICODE -D_UNICODE -O3
 CXXFLAGS=$(CCFLAGS) --std=gnu++03
-LDFLAGS=-lSDLmain -lSDL 
+LDFLAGS=-lSDLmain -lSDL
 TARGET=xtbook
-PACKAGE=build
+PACKAGE=XTBook-0.2.7-Linux
 
 
 .PHONY:				all clean
@@ -23,7 +23,7 @@ $(TARGET):			$(OBJS)
 packaging:			$(TARGET)
 					mkdir -p $(PACKAGE)
 					cp $(TARGET) $(PACKAGE)
-					cp -r ../StartupItems $(PACKAGE)
+					mkdir -p $(PACKAGE)/StartupItems
 					cp -r ../Languages $(PACKAGE)
 					cp -r ../InternalDictionaries $(PACKAGE)
 					cp -r ../Help $(PACKAGE)

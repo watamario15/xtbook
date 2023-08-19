@@ -26,7 +26,7 @@ bool XTBJpegLoader::probe(XTBStream *steam){
 XTBJpegLoader::XTBJpegLoader(XTBStream *stream):
 m_stream(stream){
 	m_stream2=new XTBRichgelJpegStream(m_stream);
-	m_decoder=new jpeg_decoder(m_stream2, false);
+	m_decoder=new jpgd::jpeg_decoder(m_stream2, false);
 	if(m_decoder->get_error_code()){
 		int errorCode=m_decoder->get_error_code();
 		delete m_decoder;
@@ -46,7 +46,7 @@ XTBJpegLoader::~XTBJpegLoader(){
 }
 
 twDC *XTBJpegLoader::image(){
-	if(m_decoder->begin()){
+	if(m_decoder->begin_decoding()){
 		int errorCode=m_decoder->get_error_code();
 		delete m_decoder;
 		delete m_stream2;
@@ -58,7 +58,7 @@ twDC *XTBJpegLoader::image(){
 	uint8_t *lineBuffer; // don't need to malloc/free
 	twSDLDC *image;
 	SDL_Surface *surf;
-	uint lineLen;
+	jpgd::uint lineLen;
 	
 	
 	int width=m_decoder->get_width();
@@ -72,7 +72,7 @@ twDC *XTBJpegLoader::image(){
 	assert(surf->format->BitsPerPixel==16);
 	
 	int y=0;
-	while(!m_decoder->decode((void **)&lineBuffer, &lineLen)){
+	while(!m_decoder->decode((const void **)&lineBuffer, &lineLen)){
 		
 		if(m_decoder->get_num_components()==1){
 			convert8To565(dest, lineBuffer, m_decoder->get_width(), y);

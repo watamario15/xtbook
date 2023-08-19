@@ -49,7 +49,7 @@ twExposureFont::twExposureFont(const std::wstring& name){
 	int ch;
 	twRect rt;
 	memset(glyphs, 0, sizeof(glyphs));
-	sprintf(fn, "%s.cfg", buf);
+	snprintf(fn, sizeof(fn) / sizeof(fn[0]) - 4, "%s.cfg", buf);
 	f=fopen(fn, "r");
 	if(f==NULL){
 		delete fnt;

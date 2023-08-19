@@ -374,6 +374,8 @@ static void XTBRunStartupItem(const XTBSysString& path){
 
 #include <dirent.h>
 
+#include <iostream>
+
 static std::string g_argv0;
 
 __attribute__((noreturn))
@@ -389,10 +391,10 @@ XTBSysString XTBChooseOpenFile(const std::wstring& typeName, const std::wstring&
 	// ask for the file-name in the console.
 	wprintf(L"*DIALOG* Open File Request\n");
 	wprintf(L"Type path for %ls (*.%ls):\n", typeName.c_str(), ext.c_str());
-	char buf1[4096];
+	XTBSysString buf1;
 	
 	// TODO: more safe way instead of gets.
-	gets(buf1);
+	std::getline(std::cin, buf1);
 	
 	// return the file name.
 	return buf1;
