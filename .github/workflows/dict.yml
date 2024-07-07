@@ -40,7 +40,7 @@ jobs:
 
           ---
 
-          ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://sevenzip.osdn.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `tarcat` を用いて全てを結合し、それをパイプで `tar` に流して展開します。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://watamario15.github.io/xtbook)から確認できます。
+          ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://7-zip.opensource.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `tarcat` を用いて全てを結合し、それをパイプで `tar` に流して展開します。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://watamario15.github.io/xtbook)から確認できます。
 
           Uncyclopedia 日本語版の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、後日リポジトリオーナーが手動生成してリリースに追加しています。ただし、毎回全ての辞書をビルドするとは限りません。最新リリースに求めている辞書がない場合は、数日待ってもう一度見に来るか、過去のリリースからダウンロードしてください。
 
