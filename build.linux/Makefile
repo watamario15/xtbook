@@ -3,7 +3,7 @@ CXX=g++
 LD=g++
 CCFLAGS= -I$(SRCPATH)/tcw/include -I$(SRCPATH) -I/usr/include/SDL -DEV_PLATFORM_GENERICPOSIX -DUNICODE -D_UNICODE -O3
 CXXFLAGS=$(CCFLAGS) --std=gnu++03
-LDFLAGS=-lSDLmain -lSDL
+LDFLAGS=-Wl,-Bstatic,-lSDLmain,-lSDL,-Bdynamic
 TARGET=xtbook
 PACKAGE=XTBook-0.2.7-Linux
 
