@@ -17,7 +17,7 @@ Download desired wikis from [Releases](../../releases), and follow instructions 
 
 ## How To Obtain the XTBook Itself
 
-You can download the original distribution by Nexhawks [here](https://github.com/yvt/xtbook/releases). Also, I made another version with small fixes such as avoiding the usage of `gets()` and updating libraries [here](https://github.com/watamario15/xtbook/releases/tag/v0.2.7). Mac (x86 32-bit) version is only on the original release, and Linux (x86 64-bit) version is only on my release.
+You can download the original distribution by Nexhawks [here](https://github.com/yvt/xtbook/releases). Also, I made another version with small fixes such as avoiding the usage of `gets()` and updating libraries [here](https://github.com/watamario15/xtbook/releases/tag/v0.2.7). Mac (x86 32-bit) version is only on the original release, and Linux (x86/Arm 64-bit) version is only on my release.
 
 ## Previous Repository at OSDN
 
@@ -62,7 +62,7 @@ Refer to the bottom of [our project wiki](../../wiki) or [our web page](https://
 
 ## XTBook 本体の入手方法
 
-Nexhawks 氏の公式版は[こちら](https://github.com/yvt/xtbook/releases)から入手できます。私が `gets()` の回避、ライブラリの更新などの微細な変更を行った版は[こちら](https://github.com/watamario15/xtbook/releases/tag/v0.2.7)から入手できます。Mac (x86 32-bit) 版は公式リリース、Linux (x86 64-bit) 版は私のリリースのみで提供されています。
+Nexhawks 氏の公式版は[こちら](https://github.com/yvt/xtbook/releases)から入手できます。私が `gets()` の回避、ライブラリの更新などの微細な変更を行った版は[こちら](https://github.com/watamario15/xtbook/releases/tag/v0.2.7)から入手できます。Mac (x86 32-bit) 版は公式リリース、Linux (x86/Arm 64-bit) 版は私のリリースのみで提供されています。
 
 ## 旧 OSDN リポジトリ
 
