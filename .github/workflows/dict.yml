@@ -35,8 +35,8 @@ jobs:
           Since some dictionaries such as Brain Wiki, English Wikipedia, and images for Japanese Uncyclopedia cannot be automatically built, the repository owner manually builds them and uploads afterwards here. However, it is not guaranteed that I build all these dictionaries every month. If you cannot find a dictionary file you need in the latest release, wait for several days or grab one from an older release.
 
           **Other dictionary files**
-          - Images for Japanese Wikipedia: [JAIST](https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
-          - Japanese Uncyclopedia: [JAIST](https://jaist.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) or [JAIST](https://jaist.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
+          - Images for Japanese Wikipedia: [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
+          - Japanese Uncyclopedia: [jaunwiki-20200306.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) or [jaunwiki-20181018.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
 
           ---
 
@@ -45,8 +45,8 @@ jobs:
           Uncyclopedia 日本語版の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、後日リポジトリオーナーが手動生成してリリースに追加しています。ただし、毎回全ての辞書をビルドするとは限りません。最新リリースに求めている辞書がない場合は、数日待ってもう一度見に来るか、過去のリリースからダウンロードしてください。
 
           **他の辞書ファイル**
-          - 日本語版 Wikipedia 画像: [JAIST](https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
-          - 日本語版 Uncyclopedia: [JAIST](https://jaist.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) または [JAIST](https://jaist.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z) / [IIJ](https://iij.dl.sourceforge.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
+          - 日本語版 Wikipedia 画像: [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
+          - 日本語版 Uncyclopedia: [jaunwiki-20200306.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/72500/jaunwiki-20200306.xtbdict.7z) または [jaunwiki-20181018.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/70198/jaunwiki-20181018.xtbdict.7z)
 
           ---
 
