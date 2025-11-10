@@ -3,7 +3,7 @@
 ![](XTBook-en.png)<br />
 © Wikipedia "[Wikipedia](https://en.wikipedia.org/wiki/Wikipedia)" - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[XTBook](https://www.nexhawks.net/) is a piece of software developed by [Nexhawks](https://github.com/yvt) and allows you to browse MediaWiki-based wiki sites on [SHARP Brain](https://jp.sharp/edictionary/) series electronic dictionaries, Windows PCs, Linux, and Mac. It supports Wikiplexus formatted data generated from a dump file of a MediaWiki-based wiki site and Image-Complex formatted data generated from image files. Also, XTBook can search articles in a second from more than 1,000,000 keys by using a searching database embedded in XTBook Wikiplexus.
+[XTBook](https://web.archive.org/web/20240117022807/http://www.nexhawks.net/) is a piece of software developed by [Nexhawks](https://github.com/yvt) and allows you to browse MediaWiki-based wiki sites on [SHARP Brain](https://jp.sharp/edictionary/) series electronic dictionaries, Windows PCs, Linux, and Mac. It supports Wikiplexus formatted data generated from a dump file of a MediaWiki-based wiki site and Image-Complex formatted data generated from image files. Also, XTBook can search articles in a second from more than 1,000,000 keys by using a searching database embedded in XTBook Wikiplexus.
 
 **Concepts**
 
@@ -21,21 +21,21 @@ You can download the original distribution by Nexhawks [here](https://github.com
 
 ## Previous Repository at OSDN
 
-In response to the current outage of OSDN, we moved the distribution site of dictionary files to this GitHub repository. You can still download old files from mirror sites such as followings while the [main OSDN site](https://osdn.net/projects/xtbook/) is unavailable.
+In response to the OSDN discontinuation, we moved the distribution site of dictionary files to this GitHub repository. You can still download old files from mirrors:
 
 **JAIST**
 
-- Release: https://jaist.dl.sourceforge.jp/xtbook/
-- Storage: https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/
+- Release: <https://ftp.jaist.ac.jp/pub/osdn.net/xtbook/>
+- Storage: <https://ftp.jaist.ac.jp/pub/osdn.net/storage/g/x/xt/xtbook/>
 
 **IIJ**
 
-- Release: https://iij.dl.sourceforge.jp/xtbook/
-- Storage: https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/
+- Release: <https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/>
+- Storage: <https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/>
 
 ## Images
 
-You can use [jawikiimg-20190730.xtbdict.7z](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) for Japanese Wikipedia. For other wiki sites, you may find an image distribution in an older release.
+You can use [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) for Japanese Wikipedia. For other wiki sites, you may find an image distribution in an older release.
 
 ## Licenses
 
@@ -48,7 +48,7 @@ Refer to the bottom of [our project wiki](../../wiki) or [our web page](https://
 ![](XTBook-ja.png)<br />
 © Wikipedia "[ウィキペディア](https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A3%E3%82%AD%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2)" - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[XTBook](https://www.nexhawks.net/) は [Nexhawks 氏](https://github.com/yvt)が[電子辞書 SHARP Brain](https://jp.sharp/edictionary/)、Windows PC、Linux、Mac で MediaWiki を可能な限り原版に忠実な形で表示するために開発したアプリケーションです。MediaWiki のダンプデータを変換して生成される、XTBook Wikiplexus 形式及び画像を変換した Image Complex 形式のデータベースに対応します。 また、XTBook Wikiplexus に内蔵された検索データベースを利用し、1,000,000 件以上のキーから高速に検索をすることができます。
+[XTBook](https://web.archive.org/web/20240117022807/http://www.nexhawks.net/) は [Nexhawks 氏](https://github.com/yvt)が[電子辞書 SHARP Brain](https://jp.sharp/edictionary/)、Windows PC、Linux、Mac で MediaWiki を可能な限り原版に忠実な形で表示するために開発したアプリケーションです。MediaWiki のダンプデータを変換して生成される、XTBook Wikiplexus 形式及び画像を変換した Image Complex 形式のデータベースに対応します。 また、XTBook Wikiplexus に内蔵された検索データベースを利用し、1,000,000 件以上のキーから高速に検索をすることができます。
 
 **コンセプト**
 
@@ -66,21 +66,21 @@ Nexhawks 氏の公式版は[こちら](https://github.com/yvt/xtbook/releases)�
 
 ## 旧 OSDN リポジトリ
 
-現在発生している OSDN の障害に対処するため、XTBook 辞書ファイルの配布を本 GitHub リポジトリに完全移行しました。以前のファイルは、以下のミラーサイトからダウンロードしてください。
+OSDN のサービス終了を受け、XTBook 辞書ファイルの配布を本 GitHub リポジトリに完全移行しました。以前のファイルは、以下のミラーサイトからダウンロードしてください。
 
 **JAIST**
 
-- Release: https://jaist.dl.sourceforge.jp/xtbook/
-- Storage: https://jaist.dl.sourceforge.jp/storage/g/x/xt/xtbook/
+- Release: <https://ftp.jaist.ac.jp/pub/osdn.net/xtbook/>
+- Storage: <https://ftp.jaist.ac.jp/pub/osdn.net/storage/g/x/xt/xtbook/>
 
 **IIJ**
 
-- Release: https://iij.dl.sourceforge.jp/xtbook/
-- Storage: https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/
+- Release: <https://ftp.iij.ad.jp/pub/osdn.jp/xtbook/>
+- Storage: <https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/>
 
 ## 画像データ
 
-日本語版 Wikipedia は [jawikiimg-20190730.xtbdict.7z](https://iij.dl.sourceforge.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) を使用してください。他の Wiki に関しては、最新版リリースに含まれていなくても古いリリースには含まれている場合があります。
+日本語版 Wikipedia は [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) を使用してください。他の Wiki に関しては、最新版リリースに含まれていなくても古いリリースには含まれている場合があります。
 
 ## ライセンス
 
