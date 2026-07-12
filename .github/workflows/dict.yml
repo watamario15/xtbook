@@ -107,10 +107,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }} | grep '^\s*asset:\s*${{ matrix.wiki }}-${{ needs.create_release.outputs.version }}.xtbdict.tar'; then
+          if ! gh release view -R ${{ github.repository }} ${{ needs.create_release.outputs.version }} | grep '^\s*asset:\s*${{ matrix.wiki }}-${{ needs.create_release.outputs.version }}.xtbdict.tar'; then
             curl -sSfLO https://github.com/watamario15/MkXTBWikiplexus/releases/latest/download/linux-amd64.zip
             unzip -oq linux-amd64.zip -d xtbconv
-            sudo apt install -y mecab-ipadic-utf8 libkakasi2
+            sudo apt-get install -y mecab-ipadic-utf8 libkakasi2
 
             export PATH=${{ github.workspace }}/xtbconv:$PATH
             export DICTDIR=${{ github.workspace }}
