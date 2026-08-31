@@ -30,9 +30,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if ! gh release view -R ${{ github.repository }} ${{ steps.time.outputs.version }}; then
-            gh release create -R ${{ github.repository }} ${{ steps.time.outputs.version }} -d -t ${{ steps.time.outputs.version }} -n 'These XTBook dictionary files (.xtbdict) are automatically built from the version ${{ steps.time.outputs.version }}. **You must extract them with an extractor such as `tar` or [7-Zip](http://www.7-zip.org/) before using them on the XTBook.** For 7-Zip, download all splitted files and specify to extract the first archive. For `tar`, concatenate all splitted files with `cat` and pipe them to `tar` (e.g., `cat jawiki-${{ steps.time.outputs.version }}.xtbdict.tar.* | tar xvf -`). Open an [issue](https://github.com/watamario15/xtbook/issues) for Wikimedia wikis you need that are not currently listed here. License information can be found [here](https://watamario15.github.io/xtbook).
+            gh release create -R ${{ github.repository }} ${{ steps.time.outputs.version }} -d -t ${{ steps.time.outputs.version }} -n 'These XTBook dictionary files (.xtbdict) are automatically built from the version ${{ steps.time.outputs.version }}. **You must extract them with an extractor such as `tar` or [7-Zip](http://www.7-zip.org/) before using them on the XTBook.** For 7-Zip, download all splitted files and specify to extract the first archive. For `tar`, concatenate all splitted files with `cat` and pipe them to `tar` (e.g., `cat jawiki-${{ steps.time.outputs.version }}.xtbdict.tar.* | tar xvf -`). Open an [issue](https://github.com/watamario15/xtbook/issues) for Wikimedia wikis you need that are not currently listed here. License information can be found [here](https://github.com/watamario15/xtbook/wiki).
 
           Since some dictionaries such as Brain Wiki, English Wikipedia, and images for Japanese Uncyclopedia cannot be automatically built, the repository owner manually builds them and uploads afterwards here. However, it is not guaranteed that I build all these dictionaries every month. If you cannot find a dictionary file you need in the latest release, wait for several days or grab one from an older release.
+
+          > [!WARNING]
+          > Image files may be subject to different licenses and usage conditions on a file-by-file basis. In addition, because the source is a wiki that anyone can edit, some images may have questionable copyright or licensing status (see the [Wikipedia example](https://en.wikipedia.org/wiki/Wikipedia:Database_download#Where_are_the_uploaded_files_(image,_audio,_video,_etc.)?)). As a general rule, the data distributed here is intended solely for the purpose of viewing articles. If you wish to reproduce, redistribute, or otherwise reuse any images, please be sure to verify the copyright and licensing status of each individual file. If you are a rights holder and discover content that infringes your rights, please contact us through an [issue](https://github.com/watamario15/xtbook/issues) or another appropriate channel, and we will take the necessary action, including removal of the infringing data.
 
           **Other dictionary files**
           - Images for Japanese Wikipedia: [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
@@ -40,9 +43,12 @@ jobs:
 
           ---
 
-          ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://7-zip.opensource.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `cat` で全て結合したものをパイプで `tar` に流して展開します（例：`cat jawiki-${{ steps.time.outputs.version }}.xtbdict.tar.* | tar xvf -`）。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://watamario15.github.io/xtbook)から確認できます。
+          ${{ steps.time.outputs.version }} の版を元に自動生成された XTBook 辞書ファイル (.xtbdict) です。**ダウンロードしたファイルは、最初に `tar` や [7-Zip](https://7-zip.opensource.jp/) 等を用いて展開する必要があります。** 7-Zip なら分割ファイル全てをダウンロードし、最初の番号のファイルを指定して展開します。`tar` の場合は `cat` で全て結合したものをパイプで `tar` に流して展開します（例：`cat jawiki-${{ steps.time.outputs.version }}.xtbdict.tar.* | tar xvf -`）。Wikimedia 財団の wiki のうち、生成していないものについては [issue](https://github.com/watamario15/xtbook/issues) を立ててもらえれば検討します。ライセンス情報は[こちら](https://github.com/watamario15/xtbook/wiki)から確認できます。
 
           Uncyclopedia 日本語版の画像データ、Brain Wiki、英語版 Wikipedia は自動化できないため、後日リポジトリオーナーが手動生成してリリースに追加しています。ただし、毎回全ての辞書をビルドするとは限りません。最新リリースに求めている辞書がない場合は、数日待ってもう一度見に来るか、過去のリリースからダウンロードしてください。
+
+          > [!WARNiNG]
+          > 画像データは個別のファイル毎にライセンスや利用条件が異なるほか、誰でも編集可能な Wiki を収集元とする性質上、権利関係が怪しい画像が含まれる場合もあります（[Wikipedia の例](https://ja.wikipedia.org/wiki/Wikipedia:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)）。ここで配布するデータは原則として記事閲覧目的のみのご利用とし、画像の転載などを行う際は個別の権利関係を必ずご確認ください。権利者の方で、権利を侵害するデータを発見し、当該データの削除をご希望される場合は、[issue](https://github.com/watamario15/xtbook/issues) などの経路でお問い合わせいただければ対応いたします。
 
           **他の辞書ファイル**
           - 日本語版 Wikipedia 画像: [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z)
