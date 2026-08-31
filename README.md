@@ -35,11 +35,14 @@ In response to the OSDN discontinuation, we moved the distribution site of dicti
 
 ## Images
 
+> [!WARNING]
+> Image files may be subject to different licenses and usage conditions on a file-by-file basis. In addition, because the source is a wiki that anyone can edit, some images may have questionable copyright or licensing status (see the [Wikipedia example](https://en.wikipedia.org/wiki/Wikipedia:Database_download#Where_are_the_uploaded_files_(image,_audio,_video,_etc.)?)). As a general rule, the data distributed here is intended solely for the purpose of viewing articles. If you wish to reproduce, redistribute, or otherwise reuse any images, please be sure to verify the copyright and licensing status of each individual file. If you are a rights holder and discover content that infringes your rights, please contact us through an [issue](https://github.com/watamario15/xtbook/issues) or another appropriate channel, and we will take the necessary action, including removal of the infringing data.
+
 You can use [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) for Japanese Wikipedia. For other wiki sites, you may find an image distribution in an older release.
 
 ## Licenses
 
-Refer to the bottom of [our project wiki](../../wiki) or [our web page](https://watamario15.github.io/xtbook/). Note that images contain files that are under a different license, as described [here](https://dumps.wikimedia.org/legal.html) for Wikipedia.
+Refer to the bottom of [our project wiki](../../wiki).
 
 ---
 
@@ -80,8 +83,11 @@ OSDN のサービス終了を受け、XTBook 辞書ファイルの配布を本 G
 
 ## 画像データ
 
+> [!WARNiNG]
+> 画像データは個別のファイル毎にライセンスや利用条件が異なるほか、誰でも編集可能な Wiki を収集元とする性質上、権利関係が怪しい画像が含まれる場合もあります（[Wikipedia の例](https://ja.wikipedia.org/wiki/Wikipedia:%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB)）。ここで配布するデータは原則として記事閲覧目的のみのご利用とし、画像の転載などを行う際は個別の権利関係を必ずご確認ください。権利者の方で、権利を侵害するデータを発見し、当該データの削除をご希望される場合は、[issue](https://github.com/watamario15/xtbook/issues) などの経路でお問い合わせいただければ対応いたします。
+
 日本語版 Wikipedia は [jawikiimg-20190730.xtbdict.7z](https://ftp.iij.ad.jp/pub/osdn.jp/storage/g/x/xt/xtbook/WikipediaImage/20190730/jawikiimg-20190730.xtbdict.7z) を使用してください。他の Wiki に関しては、最新版リリースに含まれていなくても古いリリースには含まれている場合があります。
 
 ## ライセンス
 
-[プロジェクトの wiki](../../wiki) もしくは [Web サイト](https://watamario15.github.io/xtbook/) の下部を参照してください。画像については、例えば Wikipedia であれば[こちら](https://dumps.wikimedia.org/legal.html)で説明されているように、異なるライセンスの画像が含まれていることに注意してください。
+[プロジェクトの wiki](../../wiki) の下部を参照してください。
